@@ -419,6 +419,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1513996348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2537010357084025208, guid: 847ba214d239b464f9e872d6ca604756, type: 3}
+  m_PrefabInstance: {fileID: 2537010355835521955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938841661
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dateText: {fileID: 2142948366}
+  moneyBar: {fileID: 1513996348}
   gameTimer: 0
   month: 0
 --- !u!224 &2120923868 stripped
