@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[ExecuteInEditMode()]
+//[ExecuteInEditMode()]
+
 public class MoneyBar : MonoBehaviour
 {
     public int maximum;
@@ -12,7 +13,7 @@ public class MoneyBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        current = 0;
     }
 
     // Update is called once per frame
@@ -24,5 +25,8 @@ public class MoneyBar : MonoBehaviour
     void GetCurrentFill(){
         float fillAmount = (float) current / (float) maximum;
         mask.fillAmount = fillAmount;
+    }
+    public void addMoney(int amount){
+        current += amount;
     }
 }
