@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HappinessBar : MonoBehaviour
 {
-    public int happinessLevel;
+    public int happinessLevel = 4;
     public GameObject happy1;
     public GameObject happy2;
     public GameObject happy3;
