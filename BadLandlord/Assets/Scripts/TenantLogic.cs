@@ -16,9 +16,10 @@ public class TenantLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //TODO so not constantly getting component
+        //TODO update so not constantly getting component
         happiness = happinessBar.GetComponent<HappinessBar>().happinessLevel;
         //happiness = happinessBar.happinessLevel;
+        
         if (happiness <= 0){
             Debug.Log("Tenant leaving");
             Destroy(happinessBar, 1);
