@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e9d9a567b421cda4ab2a5d669e9e23a6, type: 3}
     - target: {fileID: 5324050923293857059, guid: 2d7d165cf2ebc49d29662de99b1d41c2, type: 3}
       propertyPath: m_Name
-      value: ObjectFridge
+      value: ObjectFridge Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5324050923293857059, guid: 2d7d165cf2ebc49d29662de99b1d41c2, type: 3}
       propertyPath: m_TagString
@@ -138,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 7729131524128404517, guid: 2d7d165cf2ebc49d29662de99b1d41c2, type: 3}
       propertyPath: objectMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2018272445398010303, guid: 3217e9bf7844f42e2ae745354144e858, type: 3}
     - target: {fileID: 7729131524128404517, guid: 2d7d165cf2ebc49d29662de99b1d41c2, type: 3}
       propertyPath: spriteArray.Array.data[0]
       value: 

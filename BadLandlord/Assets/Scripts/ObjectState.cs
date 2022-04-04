@@ -86,11 +86,4 @@ public class ObjectState : MonoBehaviour
         }
     }
 
-    //Ouput the new value of the Dropdown into Text
-    //void DropdownValueChanged(Dropdown change)
-    //{
-    //    Debug.Log(m_Dropdown.value);
-    //}
-
-
 }
