@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextInteract : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //public Text text;
+    
+    // void OnTriggerEnter(Collider Other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         text.enabled = true;
+    //     }
+    // }
+    // 
+    // void OnTriggerExit(Collider Other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         text.enabled = false;
+    //     }
+    // }
 }
