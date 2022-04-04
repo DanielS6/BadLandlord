@@ -6,7 +6,7 @@ public class LandlordMove : MonoBehaviour {
 
       //public Animator anim;
       public Rigidbody2D rb2D;
-      private bool FaceRight = true; // determine which way player is facing. 
+      private bool FaceRight = false; // determine which way player is facing. 
       public static float runSpeed = 10f; 
       public float startSpeed = 10f;
       public bool isAlive = true;
@@ -42,5 +42,18 @@ public class LandlordMove : MonoBehaviour {
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+      }
+      
+      void OnCollisionEnter2D(Collision2D other)
+      {
+          if (other.gameObject.tag == "object")
+          {
+              
+          }
+          
+          if (other.gameObject.tag == "tennet")
+          {
+              
+          }
       }
 }
