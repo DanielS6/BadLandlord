@@ -28,7 +28,6 @@ public class ObjectState : MonoBehaviour
         spriteRenderer.sprite = spriteArray[curState];
 
         objectMenu.Hide();
-        objectMenu.enabled = false;
         objectMenu.ClearOptions();
 
         StartCoroutine(WaitBreak());
@@ -53,7 +52,6 @@ public class ObjectState : MonoBehaviour
             if (broken)
             {
                 objectMenu.AddOptions(dropOptions);
-                objectMenu.enabled = true;
                 objectMenu.Show();
             }
         }
@@ -61,7 +59,6 @@ public class ObjectState : MonoBehaviour
 
     public void Fix()
     {
-        Debug.Log("value: " + objectMenu.value);
         ChangeObjectState(objectMenu.value - 1);
         objectMenu.ClearOptions();
     }
