@@ -6,7 +6,9 @@ public class TenantLogic : MonoBehaviour
 {
     public GameObject happinessBar;
     public GameObject tenant;
+    public GameObject money;
     public GameObject dollarSignArt;
+    public int rentAmount = 10;
 
     int happiness;
     bool offeringRent;
@@ -33,6 +35,15 @@ public class TenantLogic : MonoBehaviour
         }
         
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && offeringRent){
+            Debug.Log("Giving rent");
+            giveRent();
+            
+        }
+    }
+
     public void offerRent()
     {
         dollarSignArt.SetActive(true);
@@ -41,6 +52,7 @@ public class TenantLogic : MonoBehaviour
     public void giveRent()
     {
         dollarSignArt.SetActive(false);
+        money.GetComponent<MoneyBar>().addMoney(rentAmount);
         offeringRent = false;
     }
 }
