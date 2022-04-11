@@ -38,7 +38,6 @@ public class TenantLogic : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && offeringRent){
-            Debug.Log("Giving rent");
             giveRent();
             
         }
