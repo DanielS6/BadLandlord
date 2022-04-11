@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Date : MonoBehaviour
 {
     public GameObject dateText;
-    // connection to MoneyBar will eventually be deleted
-    public GameObject moneyBar;
 
     public float gameTimer = 0f;
     public int month;
@@ -22,8 +20,6 @@ public class Date : MonoBehaviour
     {
         gameTimer += 0.01f;
         if (gameTimer > 1f){
-            //TODO: For every tenant in building, have them offer up rent 
-            moneyBar.GetComponent<MoneyBar>().addMoney(10);
             month++;
             updateDate();
             gameTimer = 0;
