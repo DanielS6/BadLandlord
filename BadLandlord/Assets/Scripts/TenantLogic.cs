@@ -20,7 +20,6 @@ public class TenantLogic : MonoBehaviour
         //happinessBar = happinessBar.GetComponent<HappinessBar>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //TODO update so not constantly getting component
