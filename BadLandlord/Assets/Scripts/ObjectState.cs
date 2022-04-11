@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class ObjectState : MonoBehaviour
 {
-    public bool active;
     public bool broken;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray = new Sprite[3];
     const int PERFECT = 0, FINE = 1, BROKEN = 2;
     public int curState;
-    List<string> dropOptions =
+    public List<string> dropOptions =
         new List<string> { "What will you do?", "Buy new - $20", "Quick Fix - $10", "Ignore - $0" };
-    public Dropdown objectMenu;
+    private GameObject fixMenu;
+    private GameObject player;
+    private Dropdown dropdown;
 
     // times for perfect, fine
     public int[] BREAKTIMES = new int[2];
@@ -22,13 +23,18 @@ public class ObjectState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        active = true;
         broken = false;
         curState = PERFECT;
         spriteRenderer.sprite = spriteArray[curState];
 
-        objectMenu.Hide();
-        objectMenu.ClearOptions();
+        // find dropdown
+        fixMenu = GameObject.FindGameObjectWithTag("ObjectFixMenu");
+        dropdown = fixMenu.GetComponentInChildren<Dropdown>();
+        dropdown.Hide();
+        dropdown.ClearOptions();
+
+        // find player
+        player = GameObject.FindGameObjectWithTag("Player");
 
         StartCoroutine(WaitBreak());
 
@@ -51,16 +57,18 @@ public class ObjectState : MonoBehaviour
         {
             if (broken)
             {
-                objectMenu.AddOptions(dropOptions);
-                objectMenu.Show();
+                dropdown.AddOptions(dropOptions);
+                dropdown.Show();
+                player.SendMessage("DisableMovement");
             }
         }
     }
 
     public void Fix()
     {
-        ChangeObjectState(objectMenu.value - 1);
-        objectMenu.ClearOptions();
+        ChangeObjectState(dropdown.value - 1);
+        dropdown.ClearOptions();
+        player.SendMessage("EnableMovement");
     }
 
     // Changes object state (perfect, fine, broken)

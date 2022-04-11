@@ -10,6 +10,7 @@ public class LandlordMove : MonoBehaviour {
       public static float runSpeed = 10f; 
       public float startSpeed = 10f;
       public bool isAlive = true;
+      public bool movementEnabled = true;
 
       void Start(){
            //anim = gameObject.GetComponentInChildren<Animator>();
@@ -20,7 +21,7 @@ public class LandlordMove : MonoBehaviour {
             //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1 
             //NOTE: Vertical axis: [w] / up arrow, [s] / down arrow
             Vector3 hvMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f); 
-           if (isAlive == true){
+           if (isAlive == true && movementEnabled == true){
                  
                   transform.position = transform.position + hvMove * runSpeed * Time.deltaTime;
 
@@ -56,4 +57,16 @@ public class LandlordMove : MonoBehaviour {
               
           }
       }
+
+
+    //public functions (used by Object State)
+    public void EnableMovement()
+    {
+        movementEnabled = true;
+    }
+
+    public void DisableMovement()
+    {
+        movementEnabled = false;
+    }
 }
