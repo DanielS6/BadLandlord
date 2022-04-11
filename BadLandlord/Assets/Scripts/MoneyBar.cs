@@ -26,7 +26,17 @@ public class MoneyBar : MonoBehaviour
         float fillAmount = (float) current / (float) maximum;
         mask.fillAmount = fillAmount;
     }
+    
+    /* PUBLIC FUNCTIONS */
     public void addMoney(int amount){
         current += amount;
+    }
+    public void subtractMoney(int amount){
+        int difference = current - amount;
+        if (difference > 0){
+            current = difference;
+        } else {
+            current = 0;
+        }
     }
 }
