@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5072261965131401507}
   - component: {fileID: 4545049177186151190}
   - component: {fileID: 633056965512019328}
-  - component: {fileID: 5675602548384052942}
   - component: {fileID: 1371259686327531693}
   m_Layer: 0
   m_Name: Landlord
@@ -96,27 +95,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 4545049177186151190}
-  startSpeed: 10
+  startSpeed: 5
   isAlive: 1
---- !u!95 &5675602548384052942
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8886509958240639319}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  movementEnabled: 1
+  anim: {fileID: 634853070842287498}
 --- !u!212 &1371259686327531693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -181,7 +163,7 @@ GameObject:
   - component: {fileID: 1677339060515829720}
   - component: {fileID: 634853070842287498}
   m_Layer: 0
-  m_Name: LandlordIdle1
+  m_Name: Landlord_art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +245,7 @@ Animator:
   m_GameObject: {fileID: 8979262480426146841}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f8b0449fa93294064919ae10ef24f53b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4d156210b0d8543da99ba46924494259, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

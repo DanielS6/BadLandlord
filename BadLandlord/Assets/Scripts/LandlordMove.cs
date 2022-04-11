@@ -7,14 +7,15 @@ public class LandlordMove : MonoBehaviour {
       //public Animator anim;
       public Rigidbody2D rb2D;
       private bool FaceRight = false; // determine which way player is facing. 
-      public static float runSpeed = 10f; 
-      public float startSpeed = 10f;
+      public static float runSpeed = 5f; 
+      public float startSpeed = 5f;
       public bool isAlive = true;
       public bool movementEnabled = true;
+      public Animator anim; 
 
       void Start(){
-           //anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
+           anim = gameObject.GetComponentInChildren<Animator>();
       }
 
       void Update(){
@@ -25,9 +26,9 @@ public class LandlordMove : MonoBehaviour {
                  
                   transform.position = transform.position + hvMove * runSpeed * Time.deltaTime;
 
-            // if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0)){
-            //       anim.SetBool ("Walk", true);
-            // } else {anim.SetBool ("Walk", false);}
+            if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0)){
+                  anim.SetBool("Walk", true);
+            } else {anim.SetBool("Walk", false);}
 
             // NOTE: if input is moving the Player right and Player faces left, turn, and vice-versa 
            if ((hvMove.x <0 && !FaceRight) || (hvMove.x >0 && FaceRight)){
@@ -45,18 +46,6 @@ public class LandlordMove : MonoBehaviour {
             transform.localScale = theScale;
       }
       
-      void OnCollisionEnter2D(Collision2D other)
-      {
-          if (other.gameObject.tag == "object")
-          {
-              
-          }
-          
-          if (other.gameObject.tag == "tennet")
-          {
-              
-          }
-      }
 
 
     //public functions (used by Object State)
@@ -68,5 +57,16 @@ public class LandlordMove : MonoBehaviour {
     public void DisableMovement()
     {
         movementEnabled = false;
+    }
+    
+    public void FixAnimEnter()
+    {
+        anim.SetBool("Walk", false);
+        anim.SetBool("Fix", true);
+    }
+    
+    public void FixAnimExit()
+    {
+        anim.SetBool("Fix", false);
     }
 }
