@@ -6,10 +6,15 @@ public class TenantLogic : MonoBehaviour
 {
     public GameObject happinessBar;
     public GameObject tenant;
+    public GameObject dollarSignArt;
+
     int happiness;
-    // Start is called before the first frame update
+    bool offeringRent;
+
     void Start()
     {
+        dollarSignArt.SetActive(false);
+        offeringRent = false;
         //happinessBar = happinessBar.GetComponent<HappinessBar>();
     }
 
@@ -27,5 +32,15 @@ public class TenantLogic : MonoBehaviour
             
         }
         
+    }
+    public void offerRent()
+    {
+        dollarSignArt.SetActive(true);
+        offeringRent = true;
+    }
+    public void giveRent()
+    {
+        dollarSignArt.SetActive(false);
+        offeringRent = false;
     }
 }
