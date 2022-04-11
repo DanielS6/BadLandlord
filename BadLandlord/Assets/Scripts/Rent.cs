@@ -25,7 +25,6 @@ public class Rent : MonoBehaviour
         if (curMonth != storedMonth){
             //For every tenant in building, have them offer up rent
             tenant.GetComponent<TenantLogic>().offerRent();
-            money.GetComponent<MoneyBar>().addMoney(10);
             storedMonth = curMonth;
         }
     }

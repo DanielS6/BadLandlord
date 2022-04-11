@@ -8,6 +8,7 @@ public class Date : MonoBehaviour
     public GameObject dateText;
 
     public float gameTimer = 0f;
+    public float monthTime = 5f;
     public int month;
 
     void Start()
@@ -19,7 +20,7 @@ public class Date : MonoBehaviour
     void FixedUpdate()
     {
         gameTimer += 0.01f;
-        if (gameTimer > 1f){
+        if (gameTimer > monthTime){
             month++;
             updateDate();
             gameTimer = 0;
