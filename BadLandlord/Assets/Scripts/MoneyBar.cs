@@ -10,13 +10,26 @@ public class MoneyBar : MonoBehaviour
     public int maximum;
     public int current;
     public Image mask;
-    // Start is called before the first frame update
+
     void Start()
     {
         current = 0;
     }
 
-    // Update is called once per frame
+    /* PUBLIC FUNCTIONS */
+    public void addMoney(int amount){
+        current += amount;
+    }
+    public void subtractMoney(int amount){
+        int difference = current - amount;
+        if (difference > 0){
+            current = difference;
+        } else {
+            current = 0;
+        }
+    }
+
+    /* PRIVATE FUNCTIONS */
     void Update()
     {
         GetCurrentFill();
@@ -26,7 +39,6 @@ public class MoneyBar : MonoBehaviour
         float fillAmount = (float) current / (float) maximum;
         mask.fillAmount = fillAmount;
     }
-    public void addMoney(int amount){
-        current += amount;
-    }
+    
+
 }

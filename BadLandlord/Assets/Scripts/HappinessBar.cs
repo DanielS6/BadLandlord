@@ -9,14 +9,22 @@ public class HappinessBar : MonoBehaviour
     public GameObject happy2;
     public GameObject happy3;
     public GameObject happy4;
-    // Start is called before the first frame update
+
     void Start()
     {
         happinessLevel = 4;
         
     }
 
-    // Update is called once per frame
+    /* PUBLIC FUNCTIONS */
+    public void addHappy(int amount){
+        happinessLevel += amount;
+    }
+    public void subtractHappy(int amount){
+        happinessLevel -= amount;
+    }
+    
+    /* PRIVATE FUNCTIONS */
     void Update()
     {
         showAtLevel(1, happy1);
@@ -33,4 +41,5 @@ public class HappinessBar : MonoBehaviour
             happyArt.SetActive(false);
         }
     }
+
 }
