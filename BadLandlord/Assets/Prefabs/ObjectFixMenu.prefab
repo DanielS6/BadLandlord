@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 2018272445398010303}
   m_Layer: 5
   m_Name: ObjectFixMenu
-  m_TagString: Untagged
+  m_TagString: Undefined
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,18 +163,12 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Ignore - $0
-      m_Image: {fileID: 0}
-    - m_Text: Quick Fix - $5
-      m_Image: {fileID: 0}
-    - m_Text: Buy New / Hire Pro - $15
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7729131524128404517, guid: 2d7d165cf2ebc49d29662de99b1d41c2, type: 3}
-        m_TargetAssemblyTypeName: Object, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ObjectState, Assembly-CSharp
         m_MethodName: Fix
         m_Mode: 1
         m_Arguments:
@@ -567,7 +561,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ignore - $0
+  m_Text: 
 --- !u!1 &2018272446283381818
 GameObject:
   m_ObjectHideFlags: 0

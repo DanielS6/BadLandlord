@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ObjectTag
+  - ObjectFixMenu
+  - Undefined
   layers:
   - Default
   - TransparentFX
