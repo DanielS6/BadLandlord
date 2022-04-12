@@ -31,9 +31,12 @@ public class LandlordMove : MonoBehaviour {
             } else {anim.SetBool("Walk", false);}
 
             // NOTE: if input is moving the Player right and Player faces left, turn, and vice-versa 
-           if ((hvMove.x <0 && FaceRight) || (hvMove.x >0 && !FaceRight)){
-                  playerTurn();
-            }}
+           // if ((hvMove.x <0 && FaceRight) || (hvMove.x >0 && !FaceRight)){
+           //        playerTurn();
+           //  }}
+       }
+           bool flipped = hvMove.x <0;
+           this.transform.rotation = Quaternion.Euler(new Vector4(0f, flipped ? 180f : 0f, 0f));
       }
 
       private void playerTurn(){
@@ -56,6 +59,7 @@ public class LandlordMove : MonoBehaviour {
 
     public void DisableMovement()
     {
+        anim.SetBool("Walk", false);
         movementEnabled = false;
     }
     
