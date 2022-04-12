@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class ObjectState : MonoBehaviour
 {
-    public bool active;
     public bool broken;
-    public SpriteRenderer spriteRenderer;
-    public Sprite[] spriteArray = new Sprite[3];
     const int PERFECT = 0, FINE = 1, BROKEN = 2;
     public int curState;
-    List<string> dropOptions =
+    public List<string> dropOptions =
         new List<string> { "What will you do?", "Buy new - $20", "Quick Fix - $10", "Ignore - $0" };
-    public Dropdown objectMenu;
+    private GameObject fixMenu;
+    private GameObject player;
+    private Dropdown dropdown;
+    public Animator anim;
 
     // times for perfect, fine
     public int[] BREAKTIMES = new int[2];
@@ -22,13 +22,19 @@ public class ObjectState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        active = true;
         broken = false;
         curState = PERFECT;
-        spriteRenderer.sprite = spriteArray[curState];
+        //spriteRenderer.sprite = spriteArray[curState];
+        anim = gameObject.GetComponentInChildren<Animator>();
 
-        objectMenu.Hide();
-        objectMenu.ClearOptions();
+        // find dropdown
+        fixMenu = GameObject.FindGameObjectWithTag("ObjectFixMenu");
+        dropdown = fixMenu.GetComponentInChildren<Dropdown>();
+        dropdown.Hide();
+        dropdown.ClearOptions();
+
+        // find player
+        player = GameObject.FindGameObjectWithTag("Player");
 
         StartCoroutine(WaitBreak());
 
@@ -42,7 +48,8 @@ public class ObjectState : MonoBehaviour
     IEnumerator WaitBreak()
     {
         yield return new WaitForSeconds(BREAKTIMES[curState]);
-        ChangeObjectState(BROKEN);
+        curState = BROKEN;
+        ChangeObjectState();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,34 +58,49 @@ public class ObjectState : MonoBehaviour
         {
             if (broken)
             {
-                objectMenu.AddOptions(dropOptions);
-                objectMenu.Show();
+                dropdown.AddOptions(dropOptions);
+                dropdown.Show();
+                player.SendMessage("DisableMovement");
+                dropdown.onValueChanged.AddListener(delegate {
+                    curState = dropdown.value - 1;
+                    StartCoroutine(Fix());
+                });
             }
         }
     }
 
-    public void Fix()
+    IEnumerator Fix()
     {
-        ChangeObjectState(objectMenu.value - 1);
-        objectMenu.ClearOptions();
+        if (curState != BROKEN)
+        {
+            player.SendMessage("FixAnimEnter");
+            yield return new WaitForSeconds(1);
+            player.SendMessage("FixAnimExit");
+        }
+        
+        player.SendMessage("EnableMovement");
+        ChangeObjectState();
+        dropdown.ClearOptions();
     }
 
     // Changes object state (perfect, fine, broken)
-    private void ChangeObjectState(int newState)
+    private void ChangeObjectState()
     {
-        curState = newState;
-
-        // update sprite to correct image
-        spriteRenderer.sprite = spriteArray[curState];
+        anim.SetInteger("curState", curState);
 
         // update broken bool to correct value
-        broken = newState == BROKEN ? true : false;
+        broken = curState == BROKEN ? true : false;
+        anim.SetBool("broken", broken);
 
-        if (newState == PERFECT)
+        Debug.Log("change to State: " + curState);
+        Debug.Log("anim: " + anim.GetBool("broken") + anim.GetInteger("curState"));
+
+
+        if (curState == PERFECT)
         {
             StartCoroutine(WaitBreak());
         }
-        else if (newState == FINE)
+        else if (curState == FINE)
         {
             StartCoroutine(WaitBreak());
         }
