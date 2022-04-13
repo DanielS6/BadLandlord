@@ -7,12 +7,16 @@ public class ObjectState : MonoBehaviour
 {
     public bool broken;
     const int PERFECT = 0, FINE = 1, BROKEN = 2;
+    public int[] COSTS = { 20, 10, 0 };
     public int curState;
     public List<string> dropOptions =
         new List<string> { "What will you do?", "Buy new - $20", "Quick Fix - $10", "Ignore - $0" };
     private GameObject fixMenu;
     private GameObject player;
     private Dropdown dropdown;
+    private GameObject moneybar;
+    private MoneyBar moneybarscript;
+    private int curMoney;
     public Animator anim;
 
     // times for perfect, fine
@@ -24,7 +28,6 @@ public class ObjectState : MonoBehaviour
     {
         broken = false;
         curState = PERFECT;
-        //spriteRenderer.sprite = spriteArray[curState];
         anim = gameObject.GetComponentInChildren<Animator>();
 
         // find dropdown
@@ -35,6 +38,9 @@ public class ObjectState : MonoBehaviour
 
         // find player
         player = GameObject.FindGameObjectWithTag("Player");
+
+        moneybar = GameObject.FindGameObjectWithTag("MoneyBar");
+        moneybarscript = moneybar.GetComponent<MoneyBar>();
 
         StartCoroutine(WaitBreak());
 
@@ -58,15 +64,46 @@ public class ObjectState : MonoBehaviour
         {
             if (broken)
             {
-                dropdown.AddOptions(dropOptions);
+                curMoney = moneybarscript.current;
+                List<string> curOptions = new List<string>();
+                curOptions.Add(dropOptions[0]); 
+                for (int i = 0; i < COSTS.Length; i++)
+                {
+                    if (COSTS[i] > curMoney)
+                    {
+                        curOptions.Add("not enough $: " + dropOptions[i + 1]);
+                    } else
+                    {
+                        curOptions.Add(dropOptions[i + 1]);
+                    }
+                }
+
+                dropdown.AddOptions(curOptions);
                 dropdown.Show();
                 player.SendMessage("DisableMovement");
-                dropdown.onValueChanged.AddListener(delegate {
-                    curState = dropdown.value - 1;
-                    StartCoroutine(Fix());
-                });
+                ListenForSelection();
             }
         }
+    }
+
+    private void ListenForSelection()
+    {
+        dropdown.onValueChanged.AddListener(delegate {
+            int selected = dropdown.value - 1;
+            int cost = COSTS[selected];
+            if (cost > moneybarscript.current) // not enough money
+            {
+                dropdown.Show();
+                ListenForSelection();
+            }
+            else
+            {
+                curState = dropdown.value - 1;
+                moneybar.SendMessage("subtractMoney", cost);
+                StartCoroutine(Fix());
+            }
+
+        });
     }
 
     IEnumerator Fix()
@@ -91,10 +128,6 @@ public class ObjectState : MonoBehaviour
         // update broken bool to correct value
         broken = curState == BROKEN ? true : false;
         anim.SetBool("broken", broken);
-
-        Debug.Log("change to State: " + curState);
-        Debug.Log("anim: " + anim.GetBool("broken") + anim.GetInteger("curState"));
-
 
         if (curState == PERFECT)
         {
