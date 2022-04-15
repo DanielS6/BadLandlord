@@ -1074,6 +1074,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1206232607}
     m_Modifications:
     - target: {fileID: 94089213080418347, guid: d3ea59f5f196f485e994ed27efa40af2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 94089213080418347, guid: d3ea59f5f196f485e994ed27efa40af2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 6
       objectReference: {fileID: 0}
@@ -1133,6 +1137,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6004042330317034239, guid: d3ea59f5f196f485e994ed27efa40af2, type: 3}
+      propertyPath: m_Options.m_Options.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3ea59f5f196f485e994ed27efa40af2, type: 3}
 --- !u!1001 &2537010355835521955
@@ -1160,6 +1168,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2537010357084025208, guid: 847ba214d239b464f9e872d6ca604756, type: 3}
       propertyPath: m_Name
+      value: MoneyBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537010357084025208, guid: 847ba214d239b464f9e872d6ca604756, type: 3}
+      propertyPath: m_TagString
       value: MoneyBar
       objectReference: {fileID: 0}
     - target: {fileID: 2537010357084025212, guid: 847ba214d239b464f9e872d6ca604756, type: 3}
