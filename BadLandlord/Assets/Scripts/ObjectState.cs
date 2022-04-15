@@ -42,6 +42,10 @@ public class ObjectState : MonoBehaviour
         curState = PERFECT;
         anim = gameObject.GetComponentInChildren<Animator>();
 
+        // not sure why but currently declaration doesn't work above:
+        BREAKPROBS[0] = 3;
+        BREAKPROBS[1] = 6;
+
         isSafe = false;
         gameTimer = 0f;
 
