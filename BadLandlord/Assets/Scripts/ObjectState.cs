@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ObjectState : MonoBehaviour
 {
     const int PERFECT = 0, FINE = 1, BROKEN = 2;
-
+    
     public bool broken;
     public int[] COSTS = { 20, 10, 0 }; // costs for new, quick, ignore
     public int[] SAFETIMES = { 5, 3 }; // time object is safe for after fix
@@ -114,6 +114,7 @@ public class ObjectState : MonoBehaviour
                         curOptions.Add(dropOptions[i + 1]);
                     }
                 }
+
 
                 ResetDropdown();
                 // don't let landlord move until valid decision made
