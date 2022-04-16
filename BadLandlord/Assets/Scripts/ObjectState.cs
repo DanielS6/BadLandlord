@@ -7,11 +7,14 @@ public class ObjectState : MonoBehaviour
 {
     const int PERFECT = 0, FINE = 1, BROKEN = 2;
     
+    public GameObject happinessBar;
     public bool broken;
     public int[] COSTS = { 20, 10, 0 }; // costs for new, quick, ignore
     public int[] SAFETIMES = { 5, 3 }; // time object is safe for after fix
     public int[] BREAKPROBS = { 3, 6 }; // probability of breaking 
                                         // pos int out of 100 (3 = 3% prob)
+    public int[] HAPPINESSEFFECT = { 1, 0, -1 }; // 1 = +1 happy, -1 = -1 happy
+    public int FIXBEFORE = 15; // time to fix object before happiness dec
 
     public int curState; // PERFECT, FINE, or BROKEN
     public List<string> dropOptions = // options to send to dropdown menu
@@ -19,7 +22,6 @@ public class ObjectState : MonoBehaviour
                            "Buy new - $20",
                            "Quick Fix - $10",
                            "Ignore - $0" };
-    public Animator anim;
 
    
     public const float TRIALFREQ = .25f; // freq of possibly breaking object
@@ -32,6 +34,8 @@ public class ObjectState : MonoBehaviour
     private GameObject moneybar;
     private MoneyBar moneybarscript;
     private SpriteRenderer interactPrompt;
+    private Animator anim;
+
     private int curMoney; // currently only updated when needed
     private System.Random rnd = new System.Random();
     private List<string> curOptions = new List<string>();
@@ -74,14 +78,9 @@ public class ObjectState : MonoBehaviour
 
     private void Update()
     {
-        //if (readyToInteract)
-        //{
-        //    interactPrompt.enabled = true;
-        //}
-
         if (interactPrompt.enabled && Input.GetKeyDown(KeyCode.E))
         {
-            //readyToInteract = false;
+            //hide prompt;
             interactPrompt.enabled = false;
 
             // update curMoney
@@ -133,6 +132,7 @@ public class ObjectState : MonoBehaviour
             {
                 curState = BROKEN;
                 ChangeObjectState();
+                StartCoroutine(TimeToFix());
             }
         }
     }
@@ -146,11 +146,6 @@ public class ObjectState : MonoBehaviour
             interactPrompt.enabled = true;
         } 
     }
-
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-        
-    //}
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -191,6 +186,8 @@ public class ObjectState : MonoBehaviour
             {
                 curState = selected;
                 moneybar.SendMessage("subtractMoney", cost);
+                happinessBar.SendMessage("addHappy",
+                                         HAPPINESSEFFECT[selected]);
                 StartCoroutine(Fix());
             }
         }
@@ -224,4 +221,14 @@ public class ObjectState : MonoBehaviour
         anim.SetBool("broken", broken);
     }
 
+    // called once object breaks,
+    // if not fixed within specified time, happiness decreases
+    IEnumerator TimeToFix()
+    {
+        yield return new WaitForSeconds(FIXBEFORE);
+        if (broken)
+        {
+            happinessBar.SendMessage("addHappy", HAPPINESSEFFECT[BROKEN]);
+        }
+    }
 }
