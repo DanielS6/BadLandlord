@@ -81,6 +81,7 @@ public class ObjectState : MonoBehaviour
         if (interactPrompt.enabled && Input.GetKeyDown(KeyCode.E))
         {
             //hide prompt;
+
             interactPrompt.enabled = false;
 
             // update curMoney
