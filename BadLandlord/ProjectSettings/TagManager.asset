@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - MoneyBar
   - InteractPrompt
+  - HappinessBar
   layers:
   - Default
   - TransparentFX
