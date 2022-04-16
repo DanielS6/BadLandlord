@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 1170602819309441248}
   m_Layer: 0
   m_Name: HappinessBar
-  m_TagString: Untagged
+  m_TagString: HappinessBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
