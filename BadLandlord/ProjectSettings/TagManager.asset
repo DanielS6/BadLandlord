@@ -8,6 +8,7 @@ TagManager:
   - ObjectFixMenu
   - Undefined
   - MoneyBar
+  - InteractPrompt
   layers:
   - Default
   - TransparentFX

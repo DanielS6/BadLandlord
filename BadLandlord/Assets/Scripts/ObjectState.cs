@@ -31,6 +31,7 @@ public class ObjectState : MonoBehaviour
     private Dropdown dropdown;
     private GameObject moneybar;
     private MoneyBar moneybarscript;
+    private SpriteRenderer interactPrompt;
     private int curMoney; // currently only updated when needed
     private System.Random rnd = new System.Random();
     private List<string> curOptions = new List<string>();
@@ -41,6 +42,11 @@ public class ObjectState : MonoBehaviour
         broken = false;
         curState = PERFECT;
         anim = gameObject.GetComponentInChildren<Animator>();
+
+        // e to interact prompt
+        interactPrompt =
+            this.transform.Find("e_to_interact").GetComponent<SpriteRenderer>();
+        interactPrompt.enabled = false;
 
         // not sure why but currently declaration doesn't work above:
         BREAKPROBS[0] = 3;
@@ -64,6 +70,42 @@ public class ObjectState : MonoBehaviour
         // find moneybar
         moneybar = GameObject.FindGameObjectWithTag("MoneyBar");
         moneybarscript = moneybar.GetComponent<MoneyBar>();
+    }
+
+    private void Update()
+    {
+        //if (readyToInteract)
+        //{
+        //    interactPrompt.enabled = true;
+        //}
+
+        if (interactPrompt.enabled && Input.GetKeyDown(KeyCode.E))
+        {
+            //readyToInteract = false;
+            interactPrompt.enabled = false;
+
+            // update curMoney
+            curMoney = moneybarscript.current;
+
+            // Make new temporary options list based on curMoney
+            curOptions.Clear();
+            curOptions.Add(dropOptions[0]);
+            for (int i = 0; i < COSTS.Length; i++)
+            {
+                if (COSTS[i] > curMoney) // not enough money
+                {
+                    curOptions.Add("not enough $: " + dropOptions[i + 1]);
+                }
+                else
+                {
+                    curOptions.Add(dropOptions[i + 1]);
+                }
+            }
+
+            ResetDropdown();
+            // don't let landlord move until valid decision made
+            player.SendMessage("DisableMovement");
+        }
     }
 
     // if object hasn't just been fixed (and is safe),
@@ -98,32 +140,24 @@ public class ObjectState : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Landlord interaction, give options for fixing
+        if (other.CompareTag("Player") && broken)
+        {
+            //readyToInteract = true;
+            interactPrompt.enabled = true;
+        } 
+    }
+
+    //private void OnTriggerStay2D(Collider2D other)
+    //{
+        
+    //}
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        // hide interact prompt
         if (other.CompareTag("Player"))
         {
-            if (broken)
-            {
-                // update curMoney
-                curMoney = moneybarscript.current;
-
-                // Make new temporary options list based on curMoney
-                curOptions.Clear();
-                curOptions.Add(dropOptions[0]); 
-                for (int i = 0; i < COSTS.Length; i++)
-                {
-                    if (COSTS[i] > curMoney) // not enough money
-                    {
-                        curOptions.Add("not enough $: " + dropOptions[i + 1]);
-                    } else
-                    {
-                        curOptions.Add(dropOptions[i + 1]);
-                    }
-                }
-
-
-                ResetDropdown();
-                // don't let landlord move until valid decision made
-                player.SendMessage("DisableMovement"); 
-            }
+            interactPrompt.enabled = false;
         }
     }
 
