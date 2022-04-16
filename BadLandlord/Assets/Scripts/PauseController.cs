@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour {
 
-    // This script is used by both the pause menu and the pause button
-    // components to avoid splitting the logic in multiple files
+    // This script is added to the PauseHandler object, various other
+    // components call the methods
     public GameObject pauseButton;
     public GameObject pauseMenu;
 
@@ -24,5 +25,10 @@ public class PauseController : MonoBehaviour {
         Debug.Log("Should resume");
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
+    }
+
+    public void QuitGame() {
+        Debug.Log("Should quit");
+        SceneManager.LoadScene("IntroScene");
     }
 }
