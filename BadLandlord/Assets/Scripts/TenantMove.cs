@@ -28,6 +28,6 @@ public class TenantMove : MonoBehaviour
             
             counter++;
         }
-        
+        this.transform.rotation = Quaternion.Euler(new Vector4(0f, isFacingRight ? 0f : 180f, 0f));
     }
 }

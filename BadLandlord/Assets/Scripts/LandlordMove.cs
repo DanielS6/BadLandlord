@@ -7,7 +7,7 @@ public class LandlordMove : MonoBehaviour {
       //public Animator anim;
       public Rigidbody2D rb2D;
       private bool FaceRight = true; // determine which way player is facing. 
-      public static float runSpeed = 5f; 
+      public static float runSpeed = 1f; 
       public float startSpeed = 5f;
       public bool isAlive = true;
       public bool movementEnabled = true;
