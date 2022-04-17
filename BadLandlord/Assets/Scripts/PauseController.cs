@@ -29,6 +29,15 @@ public class PauseController : MonoBehaviour {
         pauseButton.SetActive(true);
     }
 
+    public void RestartLevel() {
+        Debug.Log("Should restart");
+        // Named restart level and made scene-agnostic in case we later switch
+        // to having multiple game scenes
+        // Time should run again for the resumed scene
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void QuitGame() {
         Debug.Log("Should quit");
         // Ensure time is running again for anything else in the project,
