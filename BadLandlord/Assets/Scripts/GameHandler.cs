@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
+
     void Update() {
         if (Input.GetKey("escape")) {
             Application.Quit();

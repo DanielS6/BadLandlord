@@ -17,19 +17,18 @@ public class TenantLogic : MonoBehaviour
     {
         dollarSignArt.SetActive(false);
         offeringRent = false;
-        //happinessBar = happinessBar.GetComponent<HappinessBar>();
     }
 
     void Update()
     {
-        //TODO update so not constantly getting component
         happiness = happinessBar.GetComponent<HappinessBar>().happinessLevel;
-        //happiness = happinessBar.happinessLevel;
-        
+
+        /* LOSE GAME if a tenant leaves */
         if (happiness <= 0){
             Debug.Log("Tenant leaving");
-            Destroy(happinessBar, 1);
-            Destroy(tenant, 1);
+            /* Destroy(happinessBar, 1);
+            Destroy(tenant, 1); */
+            
             
         }
         

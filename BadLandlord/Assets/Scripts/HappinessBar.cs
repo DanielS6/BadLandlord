@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class HappinessBar : MonoBehaviour
 {
-    public int happinessLevel = 4;
+    
     public GameObject happy1;
     public GameObject happy2;
     public GameObject happy3;
     public GameObject happy4;
+
+    public int happinessLevel = 4;
+    private int maxHappinessLevel = 4;
 
     void Start()
     {
@@ -18,7 +21,12 @@ public class HappinessBar : MonoBehaviour
 
     /* PUBLIC FUNCTIONS */
     public void addHappy(int amount){
-        happinessLevel += amount;
+        int newAmount = happinessLevel + amount;
+        if (newAmount < maxHappinessLevel){
+            happinessLevel = newAmount;
+        } else {
+            happinessLevel = maxHappinessLevel;
+        }
     }
     public void subtractHappy(int amount){
         happinessLevel -= amount;

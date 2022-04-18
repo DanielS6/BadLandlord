@@ -29,6 +29,13 @@ public class MoneyBar : MonoBehaviour
             current = 0;
         }
     }
+    public bool isFull(){
+        if (current >= maximum){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /* PRIVATE FUNCTIONS */
     void Update()
