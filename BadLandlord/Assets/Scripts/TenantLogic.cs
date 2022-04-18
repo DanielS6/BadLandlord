@@ -8,6 +8,7 @@ public class TenantLogic : MonoBehaviour
     public GameObject tenant;
     public GameObject money;
     public GameObject dollarSignArt;
+    public GameObject levelHandler;
     public int rentAmount = 10;
 
     int happiness;
@@ -28,8 +29,7 @@ public class TenantLogic : MonoBehaviour
             Debug.Log("Tenant leaving");
             /* Destroy(happinessBar, 1);
             Destroy(tenant, 1); */
-            
-            
+            levelHandler.GetComponent<LevelHandler>().loseLevel();
         }
         
     }

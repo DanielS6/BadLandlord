@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7339175732308586849, guid: 6bcd6cec90a0941569e379e1d0762885, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8447510263728588506, guid: 6bcd6cec90a0941569e379e1d0762885, type: 3}
       propertyPath: happinessBar
@@ -2903,6 +2903,10 @@ PrefabInstance:
       propertyPath: money
       value: 
       objectReference: {fileID: 1513996348}
+    - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
+      propertyPath: rentAmount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
       propertyPath: happinessBar
       value: 

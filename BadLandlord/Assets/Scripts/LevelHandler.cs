@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelHandler : MonoBehaviour
 {
@@ -13,8 +14,13 @@ public class LevelHandler : MonoBehaviour
         // When money bar full, go to next level
         bool moneyFull = moneyBar.GetComponent<MoneyBar>().isFull();
         if (moneyFull){
-            Debug.Log("Going to the next level");
-            //TODO go to level transition scene here
+            nextLevel();
         }
+    }
+    public void nextLevel(){
+        SceneManager.LoadScene("WinLevel");
+    }
+    public void loseLevel(){
+        SceneManager.LoadScene("LoseLevel");
     }
 }
