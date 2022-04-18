@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class MoneyBar : MonoBehaviour
 {
+    public GameObject moneyText;
     public int maximum;
     public int current;
     public Image mask;
@@ -28,13 +29,24 @@ public class MoneyBar : MonoBehaviour
             current = 0;
         }
     }
+    public bool isFull(){
+        if (current >= maximum){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /* PRIVATE FUNCTIONS */
     void Update()
     {
         GetCurrentFill();
+        updateMoneyText();
     }
-    
+    void updateMoneyText(){
+        Text moneyTextA = moneyText.GetComponent<Text>();
+        moneyTextA.text = "$ " + current;        
+    }
     void GetCurrentFill(){
         float fillAmount = (float) current / (float) maximum;
         mask.fillAmount = fillAmount;
