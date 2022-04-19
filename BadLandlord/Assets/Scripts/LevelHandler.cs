@@ -21,6 +21,6 @@ public class LevelHandler : MonoBehaviour
         SceneManager.LoadScene("WinLevel");
     }
     public void loseLevel(){
-        SceneManager.LoadScene("LoseLevel");
+        LoseLevelController.LaunchLoseLevelScene();
     }
 }
