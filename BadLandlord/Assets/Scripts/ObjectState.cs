@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,14 @@ public class ObjectState : MonoBehaviour
     const int PERFECT = 0, FINE = 1, BROKEN = 2;
     
     public GameObject happinessBar;
+    public float TRIALFREQ = 1.75f; // freq of possibly breaking object
     public bool broken;
     public int[] COSTS = { 20, 10, 0 }; // costs for new, quick, ignore
     public int[] SAFETIMES = { 5, 3 }; // time object is safe for after fix
-    public int[] BREAKPROBS = { 3, 6 }; // probability of breaking 
-                                        // pos int out of 100 (3 = 3% prob)
+    public int[] BREAKPROBS = { 10, 20 }; // probability of breaking 
+                                        // pos int out of 100 (10 = 10% prob)
+        //BREAKPROBS INIT NOT WORKING IDK WHY, ASSIGN VALUES IN INSPECTOR
+
     public int[] HAPPINESSEFFECT = { 1, 0, -1 }; // 1 = +1 happy, -1 = -1 happy
     public int FIXBEFORE = 15; // time to fix object before happiness dec
 
@@ -23,10 +27,10 @@ public class ObjectState : MonoBehaviour
                            "Quick Fix - $10",
                            "Ignore - $0" };
 
-   
-    public const float TRIALFREQ = .25f; // freq of possibly breaking object
+    public float ALERTFREQ = .25f; // pause time for alert flashing
     public float gameTimer;
     private bool isSafe;
+    private bool alertOn;
 
     private GameObject fixMenu; 
     private GameObject player;
@@ -34,6 +38,7 @@ public class ObjectState : MonoBehaviour
     private GameObject moneybar;
     private MoneyBar moneybarscript;
     private SpriteRenderer interactPrompt;
+    private SpriteRenderer alert;
     private Animator anim;
 
     private int curMoney; // currently only updated when needed
@@ -52,9 +57,11 @@ public class ObjectState : MonoBehaviour
             this.transform.Find("e_to_interact").GetComponent<SpriteRenderer>();
         interactPrompt.enabled = false;
 
-        // not sure why but currently declaration doesn't work above:
-        BREAKPROBS[0] = 3;
-        BREAKPROBS[1] = 6;
+        // object broken alert
+        alert = this.transform.Find("AlertTEMP1").GetComponent<SpriteRenderer>();
+        alert.enabled = false;
+        alertOn = false;
+
 
         isSafe = false;
         gameTimer = 0f;
@@ -64,9 +71,7 @@ public class ObjectState : MonoBehaviour
         dropdown = fixMenu.GetComponentInChildren<Dropdown>();
         dropdown.Hide();
         dropdown.ClearOptions();
-        dropdown.onValueChanged.AddListener(delegate {
-            HandleSelection(dropdown);
-        });
+        
 
         // find player
         player = GameObject.FindGameObjectWithTag("Player");
@@ -108,11 +113,11 @@ public class ObjectState : MonoBehaviour
         }
     }
 
-    // if object hasn't just been fixed (and is safe),
-    // increase timer and call break trial upon TRIALFREQ interval
     private void FixedUpdate()
     {
-        if (!isSafe)
+        // if object hasn't just been fixed (and is safe),
+        // increase timer and call break trial upon TRIALFREQ interval
+        if (!isSafe && !broken)
         {
             gameTimer += 0.01f;
             if (gameTimer > TRIALFREQ)
@@ -121,20 +126,31 @@ public class ObjectState : MonoBehaviour
                 gameTimer = 0;
             }
         }
+
+        // if object breaks and hasn't been ignored, flash alert
+        if (alertOn)
+        {
+            gameTimer += 0.01f;
+            if (gameTimer > ALERTFREQ)
+            {
+                alert.enabled = !alert.enabled;
+                gameTimer = 0;
+            }
+        } else
+        {
+            alert.enabled = false;
+        }
     }
 
     private void ObjectBreakTrial()
     {
-        if (!broken)
+        int result = rnd.Next(100);
+        broken = result < BREAKPROBS[curState];
+        if (broken)
         {
-            int result = rnd.Next(100);
-            broken = result < BREAKPROBS[curState];
-            if (broken)
-            {
-                curState = BROKEN;
-                ChangeObjectState();
-                StartCoroutine(TimeToFix());
-            }
+            curState = BROKEN;
+            ChangeObjectState();
+            StartCoroutine(TimeToFix());
         }
     }
 
@@ -157,21 +173,25 @@ public class ObjectState : MonoBehaviour
         }
     }
 
-    // send options to dropdown menu
+    // send options to dropdown menu, add listener
     private void ResetDropdown()
     {
         dropdown.ClearOptions();
         dropdown.AddOptions(curOptions);
         dropdown.Show();
+        dropdown.onValueChanged.AddListener(HandleSelection);
     }
 
-    private void HandleSelection(Dropdown changed)
+    // remove listener, handle dropdown input
+    private void HandleSelection(int arg)
     {
-        int selected = changed.value - 1;
+        dropdown.onValueChanged.RemoveListener(HandleSelection);
+        int selected = dropdown.value - 1;
         if (selected == dropOptions.Count - 2) // if chose ignore
         {
+            alertOn = false;
             player.SendMessage("EnableMovement");
-            changed.ClearOptions();
+            dropdown.ClearOptions();
         }
         else
         {
@@ -185,6 +205,7 @@ public class ObjectState : MonoBehaviour
             // valid answer: update accordingly
             else
             {
+                alertOn = false;
                 curState = selected;
                 moneybar.SendMessage("subtractMoney", cost);
                 happinessBar.SendMessage("addHappy",
@@ -220,6 +241,11 @@ public class ObjectState : MonoBehaviour
         // update broken bool to correct value
         broken = curState == BROKEN ? true : false;
         anim.SetBool("broken", broken);
+
+        if (broken)
+        {
+            alertOn = true;
+        }
     }
 
     // called once object breaks,
