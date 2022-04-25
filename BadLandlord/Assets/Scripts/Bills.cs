@@ -42,9 +42,10 @@ public class Bills : MonoBehaviour
         }
     }
     void reset(){
+        Debug.Log("bills resetting");
+        turnedOn = false;
         gameTimer = 0f;
         countdownNum = 100;
-        turnedOn = false;
         billsAlert.SetActive(false);
         countdown.SetActive(false);
     }
@@ -53,8 +54,16 @@ public class Bills : MonoBehaviour
         billsAlert.SetActive(true);
         turnedOn = true;
     }
-    public void UpdateCountdown(){
+    void UpdateCountdown(){
         Text timeTextA = countdown.GetComponent<Text>();
         timeTextA.text = "" + countdownNum;
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("bills colliding w/player");
+        if (other.CompareTag("Player") && turnedOn){
+           reset();
+            
+        }
     }
 }
