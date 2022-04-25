@@ -18,7 +18,7 @@ public class LevelHandler : MonoBehaviour
         }
     }
     public void nextLevel(){
-        SceneManager.LoadScene("WinLevel");
+        WinLevelController.LaunchWinLevelScene();
     }
     public void loseLevel(){
         LoseLevelController.LaunchLoseLevelScene();
