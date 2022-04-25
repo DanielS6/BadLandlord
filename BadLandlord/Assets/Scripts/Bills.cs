@@ -9,6 +9,8 @@ public class Bills : MonoBehaviour
     public GameObject billsAlert;
     public GameObject levelHandler;
     public bool turnedOn;
+    public float waitTime = 10f;
+
     float gameTimer;
     float waitTimer;
     int countdownNum;
@@ -35,14 +37,13 @@ public class Bills : MonoBehaviour
         } else {
             // wait between events
             waitTimer += 0.01f;
-            if (waitTimer >= 10f){
+            if (waitTimer >= waitTime){
                 turnOn();
                 waitTimer = 0.00f;
             }
         }
     }
     void reset(){
-        Debug.Log("bills resetting");
         turnedOn = false;
         gameTimer = 0f;
         countdownNum = 100;
@@ -60,7 +61,6 @@ public class Bills : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("bills colliding w/player");
         if (other.CompareTag("Player") && turnedOn){
            reset();
             
