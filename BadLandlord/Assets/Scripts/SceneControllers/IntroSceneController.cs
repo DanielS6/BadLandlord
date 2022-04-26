@@ -7,7 +7,7 @@ public class IntroSceneController : MonoBehaviour {
 
     // Start the game, from the button on the start canvas
     public void LaunchGameScene() {
-        SceneManager.LoadScene( "MainScene" );
+        SceneManager.LoadScene( "Level1" );
     }
 
     // Switch to instructions

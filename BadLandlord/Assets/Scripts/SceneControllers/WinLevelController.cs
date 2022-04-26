@@ -9,12 +9,12 @@ public class WinLevelController : MonoBehaviour {
     // launch the WinLevel scene with knowledge of which scene was just
     // completed, to know where to go next.
     // For now, known levels and progressions:
-    // MainScene -> Level2 -> WinGame
+    // Level1 -> Level2 -> WinGame
     private static string nextLevelScene = "";
     public static void LaunchWinLevelScene() {
         Scene currentScene = SceneManager.GetActiveScene();
         string currentSceneName = currentScene.name;
-        if ( currentSceneName == "MainScene" ) {
+        if ( currentSceneName == "Level1" ) {
             nextLevelScene = "Level2";
         } else {
             // Should only be called from within level 2 in that case
