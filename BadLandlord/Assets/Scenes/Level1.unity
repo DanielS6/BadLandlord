@@ -1479,6 +1479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office
       objectReference: {fileID: 0}
+    - target: {fileID: 6696883068348167384, guid: 5eddd4a812e484c089c8a619925454fa, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eddd4a812e484c089c8a619925454fa, type: 3}
 --- !u!114 &6413333373931664208 stripped
@@ -1557,7 +1561,7 @@ PrefabInstance:
       objectReference: {fileID: 329676491290364489}
     - target: {fileID: 6464454101758323583, guid: 8fe630faa2f6940a4b3ae9b8a6c7e89e, type: 3}
       propertyPath: m_Name
-      value: Game Handler
+      value: Level Handler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe630faa2f6940a4b3ae9b8a6c7e89e, type: 3}
