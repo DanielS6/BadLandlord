@@ -9,15 +9,20 @@ public class TenantLogic : MonoBehaviour
     public GameObject money;
     public GameObject dollarSignArt;
     public GameObject levelHandler;
+    public GameObject date;
     public int rentAmount = 10;
 
     int happiness;
     bool offeringRent;
 
+    // Last time that rent was offered
+    int lastRentMonth;
+
     void Start()
     {
         dollarSignArt.SetActive(false);
         offeringRent = false;
+        lastRentMonth = 0;
     }
 
     void Update()
@@ -31,13 +36,20 @@ public class TenantLogic : MonoBehaviour
             Destroy(tenant, 1); */
             levelHandler.GetComponent<LevelHandler>().loseLevel();
         }
-        
+        /* Check if rent should be offered */
+        int currentMonth = date.GetComponent<Date>().month;
+        if (currentMonth != lastRentMonth) {
+            // Start offering rent, and update the last month
+            lastRentMonth = currentMonth;
+            offerRent();
+        }
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && offeringRent){
             giveRent();
-            
+
         }
     }
 
