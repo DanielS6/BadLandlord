@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 4545049177186151190}
-  startSpeed: 5
+  runSpeed: 2
   isAlive: 1
   movementEnabled: 1
   anim: {fileID: 634853070842287498}

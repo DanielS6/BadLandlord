@@ -2,16 +2,15 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class LandlordMove : MonoBehaviour { 
+public class LandlordMove : MonoBehaviour {
 
       //public Animator anim;
       public Rigidbody2D rb2D;
-      private bool FaceRight = true; // determine which way player is facing. 
-      public static float runSpeed = 1f; 
-      public float startSpeed = 5f;
+      private bool FaceRight = true; // determine which way player is facing.
+      public float runSpeed = 2f;
       public bool isAlive = true;
       public bool movementEnabled = true;
-      public Animator anim; 
+      public Animator anim;
 
       void Start(){
            rb2D = transform.GetComponent<Rigidbody2D>();
@@ -19,18 +18,18 @@ public class LandlordMove : MonoBehaviour {
       }
 
       void Update(){
-            //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1 
+            //NOTE: Horizontal axis: [a] / left arrow is -1, [d] / right arrow is 1
             //NOTE: Vertical axis: [w] / up arrow, [s] / down arrow
-            Vector3 hvMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f); 
+            Vector3 hvMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
            if (isAlive == true && movementEnabled == true){
-                 
+
                   transform.position = transform.position + hvMove * runSpeed * Time.deltaTime;
 
             if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0)){
                   anim.SetBool("Walk", true);
             } else {anim.SetBool("Walk", false);}
 
-            // NOTE: if input is moving the Player right and Player faces left, turn, and vice-versa 
+            // NOTE: if input is moving the Player right and Player faces left, turn, and vice-versa
            // if ((hvMove.x <0 && FaceRight) || (hvMove.x >0 && !FaceRight)){
            //        playerTurn();
            //  }}
@@ -48,7 +47,7 @@ public class LandlordMove : MonoBehaviour {
             theScale.x *= -1;
             transform.localScale = theScale;
       }
-      
+
 
 
     //public functions (used by Object State)
@@ -62,13 +61,13 @@ public class LandlordMove : MonoBehaviour {
         anim.SetBool("Walk", false);
         movementEnabled = false;
     }
-    
+
     public void FixAnimEnter()
     {
         anim.SetBool("Walk", false);
         anim.SetBool("Fix", true);
     }
-    
+
     public void FixAnimExit()
     {
         anim.SetBool("Fix", false);
