@@ -10,6 +10,7 @@ TagManager:
   - MoneyBar
   - InteractPrompt
   - HappinessBar
+  - Elevator
   layers:
   - Default
   - TransparentFX
