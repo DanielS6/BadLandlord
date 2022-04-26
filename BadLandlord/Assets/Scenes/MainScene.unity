@@ -887,18 +887,6 @@ MonoBehaviour:
   isAlive: 1
   movementEnabled: 1
   anim: {fileID: 0}
---- !u!114 &728641430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728641426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d771b2beab226408ea121a510297264b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &804502998
 GameObject:
   m_ObjectHideFlags: 0
