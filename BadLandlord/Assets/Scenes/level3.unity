@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 1509573522}
   - component: {fileID: 1509573521}
   m_Layer: 5
-  m_Name: Level2Warning
+  m_Name: Level3Warning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -606,7 +606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: THIS IS LEVEL 2
+  m_Text: THIS IS LEVEL 3
 --- !u!222 &1509573522
 CanvasRenderer:
   m_ObjectHideFlags: 0
