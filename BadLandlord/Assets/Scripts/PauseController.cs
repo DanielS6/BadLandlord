@@ -33,6 +33,12 @@ public class PauseController : MonoBehaviour {
         }
     }
 
+    public void SetVolumeLevel(float sliderVolume) {
+        // Placeholder for now until we actually have an audio mixer
+        Debug.Log( "Should set volume to:" );
+        Debug.Log( Mathf.Log10(sliderVolume) * 20 );
+    }
+
     public void PauseGame() {
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
