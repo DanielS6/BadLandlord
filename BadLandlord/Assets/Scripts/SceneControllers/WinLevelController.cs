@@ -5,6 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class WinLevelController : MonoBehaviour {
 
+    // Helper to get the next level name, using early returns instead of
+    // break statements
+    private static string getNextLevelName(string currentLevelName) {
+        switch( currentLevelName ) {
+            case "Level1":
+                // Level1 -> Level2
+                return "Level2";
+            case "Level2":
+                // Level2 -> Level3
+                return "level3";
+            case "level3":
+                // Level3 -> Level4
+                // TODO figure out level 4 scene name
+                return "levelfour";
+            case "levelfour":
+                // Level4 -> Level5
+                return "level5";
+            case "level5":
+                return "WinGame";
+            default:
+                // Unknown
+                return "";
+        }
+    }
+
     // Static entry point to be called by code in the actual game scenes,
     // launch the WinLevel scene with knowledge of which scene was just
     // completed, to know where to go next.
@@ -14,12 +39,7 @@ public class WinLevelController : MonoBehaviour {
     public static void LaunchWinLevelScene() {
         Scene currentScene = SceneManager.GetActiveScene();
         string currentSceneName = currentScene.name;
-        if ( currentSceneName == "Level1" ) {
-            nextLevelScene = "Level2";
-        } else {
-            // Should only be called from within level 2 in that case
-            nextLevelScene = "WinGame";
-        }
+        nextLevelScene = WinLevelController.getNextLevelName( currentSceneName );
         SceneManager.LoadScene("WinLevel");
     }
 
