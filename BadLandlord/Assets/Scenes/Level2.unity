@@ -979,11 +979,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
   m_PrefabInstance: {fileID: 635303561}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2001528030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2507563475908842721, guid: c9591e7d584514dff83369fe9b735242, type: 3}
-  m_PrefabInstance: {fileID: 7100884666792311774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2018925802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2297453878322657090, guid: d3ea59f5f196f485e994ed27efa40af2, type: 3}
@@ -1695,6 +1690,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8bda797054106cf4aaca027385660936, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+--- !u!1 &7100884666792311775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8297468138263463493, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+  m_PrefabInstance: {fileID: 7100884666792311774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8384924878202988765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1777,7 +1777,7 @@ PrefabInstance:
     - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
       propertyPath: happinessBar
       value: 
-      objectReference: {fileID: 2001528030}
+      objectReference: {fileID: 7100884666792311775}
     - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
       propertyPath: levelHandler
       value: 
