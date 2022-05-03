@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class InstructionsSceneController : MonoBehaviour {
 
-    // Go back to intro scene
-    public void LaunchIntroScene() {
-        SceneManager.LoadScene( "IntroScene" );
+    // Actually start the first level
+    public void LaunchGameScene() {
+        SceneManager.LoadScene( "Level1" );
     }
 
 }

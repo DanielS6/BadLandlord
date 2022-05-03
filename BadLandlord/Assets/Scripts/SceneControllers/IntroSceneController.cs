@@ -5,12 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class IntroSceneController : MonoBehaviour {
 
-    // Start the game, from the button on the start canvas
-    public void LaunchGameScene() {
-        SceneManager.LoadScene( "Level1" );
-    }
-
-    // Switch to instructions
+    // Start the game, goes to the instructions scene and from there to Level1
     public void LaunchInstructionsScene() {
         SceneManager.LoadScene( "InstructionsScene" );
     }
