@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class Bills : MonoBehaviour
 {
+    
     public GameObject countdown;
     public GameObject billsAlert;
     public GameObject levelHandler;
+    public GameObject notificationBar;
     public bool turnedOn;
     public float waitTime = 10f;
 
@@ -28,6 +30,10 @@ public class Bills : MonoBehaviour
                 countdownNum -= 1;
                 gameTimer = 0;
                 UpdateCountdown();
+            }
+            if (countdownNum <= 20){
+                string msg = "The bills need to be paid!";
+                notificationBar.GetComponent<NotificationBar>().display(msg);
             }
             if (countdownNum <= 0){
                 countdownNum = 0;

@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class HappinessBar : MonoBehaviour
 {
+
+    // connect to notification bar to notify when tenant too unhappy
+    public GameObject notificationBar;
     // 4 levels of happyness, each with a different image
     // (there are 6 images available if we want to use them all later)
     public Sprite faceImage1;
@@ -48,6 +51,10 @@ public class HappinessBar : MonoBehaviour
         if (happinessLevel >= 1 && happinessLevel <= 4) {
             // Level is [1, 4] but array indexes are [0, 3]
             displayFace.sprite = faceImages[ happinessLevel - 1 ];
+        }
+        if (happinessLevel <= 2){
+            notificationBar.GetComponent<NotificationBar>().display(
+                "A tenant is unhappy and about to leave!");
         }
     }
 
