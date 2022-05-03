@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class InstructionsSceneController : MonoBehaviour {
 
-    // Actually start the first level
-    public void LaunchGameScene() {
-        SceneManager.LoadScene( "Level1" );
+    // Display the backstory before starting the game
+    public void LaunchBackstoryScene() {
+        SceneManager.LoadScene( "BackstoryScene" );
     }
 
 }
