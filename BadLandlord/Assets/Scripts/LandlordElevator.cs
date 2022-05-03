@@ -9,11 +9,19 @@ public class LandlordElevator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)) //up for now
         {
             if (currElevator != null)
             {
-                transform.position = currElevator.GetComponent<Elevator>().GetDestination().position;
+                transform.position = currElevator.GetComponent<Elevator>().GetDestinationUp().position;
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.W)) // down for now
+        {
+            if (currElevator != null)
+            {
+                transform.position = currElevator.GetComponent<Elevator>().GetDestinationDown().position;
             }
         }
     }

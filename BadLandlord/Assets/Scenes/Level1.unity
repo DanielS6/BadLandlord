@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 1964536764}
+    - target: {fileID: 5328231103529412572, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
+      propertyPath: destinationDown
+      value: 
+      objectReference: {fileID: 1964536764}
     - target: {fileID: 9027303057378201785, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -350,6 +354,10 @@ PrefabInstance:
       objectReference: {fileID: 728641426}
     - target: {fileID: 5328231103529412572, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: destination
+      value: 
+      objectReference: {fileID: 1256314361}
+    - target: {fileID: 5328231103529412572, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
+      propertyPath: destinationUp
       value: 
       objectReference: {fileID: 1256314361}
     - target: {fileID: 9027303057378201785, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}

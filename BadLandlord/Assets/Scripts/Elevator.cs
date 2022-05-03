@@ -6,7 +6,8 @@ public class Elevator : MonoBehaviour
 {
     public GameObject player;
     public Animator anim;
-    [SerializeField] private Transform destination; 
+    [SerializeField] private Transform destinationUp;
+     [SerializeField] private Transform destinationDown;
     //private GameObject currElevator;
     //private bool top;
     //private bool bottom;
@@ -26,9 +27,14 @@ public class Elevator : MonoBehaviour
         anim = gameObject.GetComponentInChildren<Animator>();
     }
     
-    public Transform GetDestination()
+    public Transform GetDestinationUp()
     {
-        return destination;
+        return destinationUp;
+    }
+    
+    public Transform GetDestinationDown()
+    {
+        return destinationDown;
     }
     
     private void OnTriggerEnter2D(Collider2D other)
