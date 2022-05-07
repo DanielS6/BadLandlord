@@ -55,7 +55,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884664797899671
 SpriteRenderer:
@@ -138,7 +138,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884664847056142
 SpriteRenderer:
@@ -223,7 +223,7 @@ Transform:
   - {fileID: 4675757936528491750}
   - {fileID: 4191043940889743807}
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7100884665380293756
 GameObject:
@@ -254,7 +254,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884665380293757
 SpriteRenderer:
@@ -335,6 +335,7 @@ Transform:
   m_LocalPosition: {x: -0.5179881, y: 5.01, z: -0.0073583364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8297468138263463492}
   - {fileID: 6925147532705096044}
   - {fileID: 7100884665317806990}
   - {fileID: 7100884666615382589}
@@ -347,7 +348,6 @@ Transform:
   - {fileID: 7100884666040082866}
   - {fileID: 7100884666008193511}
   - {fileID: 7100884665956404029}
-  - {fileID: 8297468138263463492}
   - {fileID: 5675688299859765951}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -381,7 +381,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884665541200216
 SpriteRenderer:
@@ -464,7 +464,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884665956404026
 SpriteRenderer:
@@ -547,7 +547,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884666008193510
 SpriteRenderer:
@@ -630,7 +630,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884666040082869
 SpriteRenderer:
@@ -713,7 +713,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884666094017498
 SpriteRenderer:
@@ -796,7 +796,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884666615382588
 SpriteRenderer:
@@ -879,7 +879,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 7100884665538735367}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7100884666705605449
 SpriteRenderer:
@@ -1027,7 +1027,7 @@ PrefabInstance:
     - target: {fileID: 4853193262607447232, guid: 3614cdd35ae6d4f279b9eb16b3f0660b, type: 3}
       propertyPath: happinessBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8297468138263463493}
     - target: {fileID: 6032687343970861947, guid: 3614cdd35ae6d4f279b9eb16b3f0660b, type: 3}
       propertyPath: m_Name
       value: ObjectSink
@@ -1049,7 +1049,7 @@ PrefabInstance:
     - target: {fileID: 3232235474633357440, guid: fd4f2ce5386384356b67ad1e69854825, type: 3}
       propertyPath: happinessBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8297468138263463493}
     - target: {fileID: 4339602707678891835, guid: fd4f2ce5386384356b67ad1e69854825, type: 3}
       propertyPath: m_Name
       value: ObjectMicrowave
@@ -1294,7 +1294,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 184779553443304664, guid: 4b0c85c055b2e424bb0b90a97bd7054f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 184779553443304664, guid: 4b0c85c055b2e424bb0b90a97bd7054f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1360,7 +1360,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1532,7 +1532,7 @@ PrefabInstance:
     - target: {fileID: 6201738549115082416, guid: 6ce21f1c3721e421f9e9de1f5ea02864, type: 3}
       propertyPath: happinessBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8297468138263463493}
     - target: {fileID: 6201738549115082416, guid: 6ce21f1c3721e421f9e9de1f5ea02864, type: 3}
       propertyPath: BREAKPROBS.Array.data[0]
       value: 10
