@@ -9,10 +9,10 @@ public class ObjectState : MonoBehaviour
     const int PERFECT = 0, FINE = 1, BROKEN = 2;
     
     public GameObject happinessBar;
-    public float TRIALFREQ = 1.75f; // freq of possibly breaking object
+    public float TRIALFREQ; // freq of possibly breaking object
     public bool broken;
     public int[] COSTS = { 20, 10, 0 }; // costs for new, quick, ignore
-    public int[] SAFETIMES = { 5, 3 }; // time object is safe for after fix
+    public int[] SAFETIMES = { 10, 8 }; // time object is safe for after fix
     public int[] BREAKPROBS = { 10, 20 }; // probability of breaking 
                                         // pos int out of 100 (10 = 10% prob)
         //BREAKPROBS INIT NOT WORKING IDK WHY, ASSIGN VALUES IN INSPECTOR
@@ -117,15 +117,15 @@ public class ObjectState : MonoBehaviour
     {
         // if object hasn't just been fixed (and is safe),
         // increase timer and call break trial upon TRIALFREQ interval
-        if (!isSafe && !broken)
-        {
-            gameTimer += 0.01f;
-            if (gameTimer > TRIALFREQ)
-            {
-                ObjectBreakTrial();
-                gameTimer = 0;
-            }
-        }
+        //if (!isSafe && !broken)
+        //{
+        //    gameTimer += 0.01f;
+        //    if (gameTimer > TRIALFREQ)
+        //    {
+        //        ObjectBreakTrial();
+        //        gameTimer = 0;
+        //    }
+        //}
 
         // if object breaks and hasn't been ignored, flash alert
         if (alertOn)
@@ -142,7 +142,7 @@ public class ObjectState : MonoBehaviour
         }
     }
 
-    private void ObjectBreakTrial()
+    public void ObjectBreakTrial()
     {
         int result = rnd.Next(100);
         broken = result < BREAKPROBS[curState];
