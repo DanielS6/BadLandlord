@@ -1810,6 +1810,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5675688299859765944, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+      propertyPath: date
+      value: 
+      objectReference: {fileID: 2114716416}
+    - target: {fileID: 5675688299859765944, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 1513996348}
+    - target: {fileID: 5675688299859765944, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
     - target: {fileID: 7100884665538735366, guid: c9591e7d584514dff83369fe9b735242, type: 3}
       propertyPath: m_Name
       value: Apartment1

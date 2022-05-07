@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &316961386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3156143774988962987, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
+  m_PrefabInstance: {fileID: 8318236574952862145}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &528169016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1666,6 +1671,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 7482771342939558043, guid: 253bb40bb8e794f58a090636a2af8a21, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 316961386}
     - target: {fileID: 8591263103919548192, guid: 253bb40bb8e794f58a090636a2af8a21, type: 3}
       propertyPath: m_Name
       value: ObjectCouch
@@ -1869,6 +1878,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5675688299859765944, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+      propertyPath: date
+      value: 
+      objectReference: {fileID: 2114716416}
+    - target: {fileID: 5675688299859765944, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 1513996348}
+    - target: {fileID: 5675688299859765944, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
     - target: {fileID: 7100884665538735366, guid: c9591e7d584514dff83369fe9b735242, type: 3}
       propertyPath: m_Name
       value: Apartment1
