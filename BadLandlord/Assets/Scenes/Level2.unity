@@ -548,6 +548,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
   m_PrefabInstance: {fileID: 609365021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1362379371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5509440134557236812, guid: f99683b79fd6c433b841941717281db0, type: 3}
+  m_PrefabInstance: {fileID: 2703403038657390663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1362379376 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6007168579040229511, guid: f99683b79fd6c433b841941717281db0, type: 3}
+  m_PrefabInstance: {fileID: 2703403038657390663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513996348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2537010357084025208, guid: 847ba214d239b464f9e872d6ca604756, type: 3}
@@ -610,6 +620,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de936130f3051a46962a31f7b30fa82, type: 3}
+--- !u!1 &1697055897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7479622980592438303, guid: f99683b79fd6c433b841941717281db0, type: 3}
+  m_PrefabInstance: {fileID: 2703403038657390663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1813055500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1138,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2703403039622046498, guid: f99683b79fd6c433b841941717281db0, type: 3}
   m_PrefabInstance: {fileID: 2703403038657390663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2129904508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2133367034167407662, guid: f99683b79fd6c433b841941717281db0, type: 3}
+  m_PrefabInstance: {fileID: 2703403038657390663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2142948366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8695870318727336610, guid: 173f2a0ca11464e1ba5a10471b993be4, type: 3}
@@ -1345,6 +1365,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 932599111107674645, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: date
+      value: 
+      objectReference: {fileID: 2114716416}
+    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 1513996348}
+    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: tenant
+      value: 
+      objectReference: {fileID: 1362379371}
+    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 2129904508}
+    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
+    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: dollarSignArt
+      value: 
+      objectReference: {fileID: 1697055897}
+    - target: {fileID: 1503451309986228213, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1362379376}
+    - target: {fileID: 1858101840404923245, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2046427791827964757, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: m_Name
       value: Elevator2
@@ -1449,6 +1505,10 @@ PrefabInstance:
       propertyPath: notificationBar
       value: 
       objectReference: {fileID: 2106367745}
+    - target: {fileID: 8319931360954611246, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 8894607878386250854, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: m_RootOrder
       value: 15
