@@ -37,6 +37,7 @@ public class ObjectHandler : MonoBehaviour
         GameObject[] allObjects = GameObject.FindGameObjectsWithTag("ObjectTag");
         int index = rnd.Next(allObjects.Length);
         GameObject chosen = allObjects[index];
+
         chosen.GetComponent<ObjectState>().ObjectBreakTrial();
     }
 
