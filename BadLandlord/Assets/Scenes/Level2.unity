@@ -1442,6 +1442,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8bda797054106cf4aaca027385660936, type: 3}
     - target: {fileID: 7374857183365524739, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
+    - target: {fileID: 7374857183365524739, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: notificationBar
       value: 
       objectReference: {fileID: 2106367745}
@@ -1676,6 +1680,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 641051306135265128, guid: c9591e7d584514dff83369fe9b735242, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
     - target: {fileID: 641051306135265128, guid: c9591e7d584514dff83369fe9b735242, type: 3}
       propertyPath: notificationBar
       value: 

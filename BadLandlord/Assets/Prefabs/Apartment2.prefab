@@ -1252,6 +1252,10 @@ PrefabInstance:
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 2133367034167407662}
+    - target: {fileID: 6526977264849561103, guid: 4f3324c9d2fa14ae294c4714932b227c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 61
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8691108861123568903, guid: 4f3324c9d2fa14ae294c4714932b227c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f3324c9d2fa14ae294c4714932b227c, type: 3}
