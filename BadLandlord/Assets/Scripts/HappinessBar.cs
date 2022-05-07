@@ -8,6 +8,7 @@ public class HappinessBar : MonoBehaviour
 
     // connect to notification bar to notify when tenant too unhappy
     public GameObject notificationBar;
+    public GameObject levelHandler;
     // 4 levels of happyness, each with a different image
     // (there are 6 images available if we want to use them all later)
     public Sprite faceImage1;
@@ -52,10 +53,15 @@ public class HappinessBar : MonoBehaviour
             // Level is [1, 4] but array indexes are [0, 3]
             displayFace.sprite = faceImages[ happinessLevel - 1 ];
         }
-        if (happinessLevel <= 2){
+        if (happinessLevel <= 1){
             notificationBar.GetComponent<NotificationBar>().display(
                 "A tenant is unhappy and about to leave!");
+            //lose if tenant is unhappy
+            if (happinessLevel <= 0){
+                levelHandler.GetComponent<LevelHandler>().loseLevel();
+            }
         }
+
     }
 
 }
