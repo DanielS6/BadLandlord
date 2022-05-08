@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseController : MonoBehaviour {
 
@@ -14,6 +15,12 @@ public class PauseController : MonoBehaviour {
     // Controlling the volume of the music
     public AudioMixer mixer;
 
+    // Persist both the volume and the slider location across scenes by
+    // having a reference to the slider and a static variable with the slider
+    // value, so that on start we can restore the location
+    public Slider volumeSlider;
+    private static float rawVolumeSliderVal = -1.0f;
+
     // State to know what to do when the escape key is pressed, either pause
     // or resume
     private bool currentlyPaused;
@@ -22,6 +29,14 @@ public class PauseController : MonoBehaviour {
         // Pause menu starts hidden
         currentlyPaused = false;
         pauseMenu.SetActive(false);
+        // Make use of the stored volume if it was set in a prior scene
+        if ( rawVolumeSliderVal != -1.0f ) {
+            mixer.SetFloat(
+                "MusicVolume",
+                Mathf.Log10(rawVolumeSliderVal) * 20
+            );
+            volumeSlider.value = rawVolumeSliderVal;
+        }
     }
 
     void Update() {
@@ -39,6 +54,8 @@ public class PauseController : MonoBehaviour {
 
     public void SetVolumeLevel(float sliderVolume) {
         mixer.SetFloat( "MusicVolume", Mathf.Log10(sliderVolume) * 20 );
+        // Store the value so that we can persist it across scenes
+        rawVolumeSliderVal = sliderVolume;
     }
 
     public void PauseGame() {

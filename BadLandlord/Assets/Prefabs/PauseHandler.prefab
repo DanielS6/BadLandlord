@@ -498,6 +498,7 @@ MonoBehaviour:
   pauseButton: {fileID: 3293173049438340196}
   pauseMenu: {fileID: 3293173048803036604}
   mixer: {fileID: 24100000, guid: b21b028aeded7074d854696e4c666da2, type: 2}
+  volumeSlider: {fileID: 7863387110074538388}
 --- !u!1 &3293173049160061775
 GameObject:
   m_ObjectHideFlags: 0
