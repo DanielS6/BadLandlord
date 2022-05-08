@@ -1217,14 +1217,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
-      propertyPath: date
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
-      propertyPath: money
-      value: 
-      objectReference: {fileID: 8695870318736956844, guid: 173f2a0ca11464e1ba5a10471b993be4, type: 3}
-    - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
       propertyPath: rentAmount
       value: 20
       objectReference: {fileID: 0}
@@ -1232,10 +1224,6 @@ PrefabInstance:
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 8297468138263463493}
-    - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
-      propertyPath: levelHandler
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8128438525511541399, guid: b459c58110b644fd2baae48ad4943fc9, type: 3}
       propertyPath: dollarSignArt
       value: 

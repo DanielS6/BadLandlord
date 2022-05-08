@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &4226628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5509440134557236812, guid: f99683b79fd6c433b841941717281db0, type: 3}
-  m_PrefabInstance: {fileID: 2703403038657390663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!50 &4226633 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6007168579040229511, guid: f99683b79fd6c433b841941717281db0, type: 3}
@@ -195,16 +190,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7459623851656473e89422e360679867, type: 3}
---- !u!1 &356771606 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2133367034167407662, guid: f99683b79fd6c433b841941717281db0, type: 3}
-  m_PrefabInstance: {fileID: 2703403038657390663}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &577093303 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7479622980592438303, guid: f99683b79fd6c433b841941717281db0, type: 3}
-  m_PrefabInstance: {fileID: 2703403038657390663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &609365021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1642,21 +1627,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1513996348}
     - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
-      propertyPath: tenant
-      value: 
-      objectReference: {fileID: 4226628}
-    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
-      propertyPath: happinessBar
-      value: 
-      objectReference: {fileID: 356771606}
-    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: levelHandler
       value: 
       objectReference: {fileID: 1906473147}
-    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
-      propertyPath: dollarSignArt
-      value: 
-      objectReference: {fileID: 577093303}
     - target: {fileID: 1503451309986228213, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: rb
       value: 

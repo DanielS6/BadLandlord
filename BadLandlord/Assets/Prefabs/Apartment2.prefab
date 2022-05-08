@@ -1061,6 +1061,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3356706168486781913, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 2133367034167407662}
     - target: {fileID: 7893792130008882785, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
       propertyPath: m_Name
       value: Tenant2

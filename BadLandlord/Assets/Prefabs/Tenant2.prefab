@@ -282,9 +282,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happinessBar: {fileID: 0}
-  tenant: {fileID: 0}
+  tenant: {fileID: 7893792130008882785}
   money: {fileID: 0}
-  dollarSignArt: {fileID: 0}
+  dollarSignArt: {fileID: 5059198220554202162}
   levelHandler: {fileID: 0}
   date: {fileID: 0}
   rentAmount: 10

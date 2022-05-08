@@ -390,11 +390,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
---- !u!1 &697981838 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2133367034167407662, guid: f99683b79fd6c433b841941717281db0, type: 3}
-  m_PrefabInstance: {fileID: 2703403038657390663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717655145
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,11 +817,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de936130f3051a46962a31f7b30fa82, type: 3}
---- !u!1 &1616609783 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5509440134557236812, guid: f99683b79fd6c433b841941717281db0, type: 3}
-  m_PrefabInstance: {fileID: 2703403038657390663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!50 &1616609788 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6007168579040229511, guid: f99683b79fd6c433b841941717281db0, type: 3}
@@ -1126,11 +1116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 728641426}
---- !u!1 &1943673920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7479622980592438303, guid: f99683b79fd6c433b841941717281db0, type: 3}
-  m_PrefabInstance: {fileID: 2703403038657390663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1964536764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
@@ -1460,21 +1445,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1513996348}
     - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
-      propertyPath: tenant
-      value: 
-      objectReference: {fileID: 1616609783}
-    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
-      propertyPath: happinessBar
-      value: 
-      objectReference: {fileID: 697981838}
-    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: levelHandler
       value: 
       objectReference: {fileID: 1906473147}
-    - target: {fileID: 1111402824696071156, guid: f99683b79fd6c433b841941717281db0, type: 3}
-      propertyPath: dollarSignArt
-      value: 
-      objectReference: {fileID: 1943673920}
     - target: {fileID: 1503451309986228213, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: rb
       value: 
@@ -1888,6 +1861,10 @@ PrefabInstance:
       propertyPath: levelHandler
       value: 
       objectReference: {fileID: 1906473147}
+    - target: {fileID: 6696883068348167384, guid: 5eddd4a812e484c089c8a619925454fa, type: 3}
+      propertyPath: notificationBar
+      value: 
+      objectReference: {fileID: 528169017}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eddd4a812e484c089c8a619925454fa, type: 3}
 --- !u!114 &6413333373931664208 stripped
