@@ -1370,6 +1370,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6661587343127868282, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6747936289526846530, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: m_Name
       value: Apartment4
@@ -1657,6 +1661,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 4226633}
+    - target: {fileID: 1503451309986228213, guid: f99683b79fd6c433b841941717281db0, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2604385316330225789, guid: f99683b79fd6c433b841941717281db0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2121,6 +2129,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apartment3
       objectReference: {fileID: 0}
+    - target: {fileID: 1170818294662517347, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
+      propertyPath: date
+      value: 
+      objectReference: {fileID: 2114716416}
+    - target: {fileID: 1170818294662517347, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 1513996348}
+    - target: {fileID: 1170818294662517347, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
     - target: {fileID: 1366654261823051119, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2132,6 +2152,10 @@ PrefabInstance:
     - target: {fileID: 2715184218157264513, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909343039086811418, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5005735028215735482, guid: 82937c237a82c4b27bfe67dc03e5bdca, type: 3}
       propertyPath: m_Sprite
