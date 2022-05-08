@@ -7,7 +7,7 @@ public class Elevator : MonoBehaviour
     public GameObject player;
     public Animator anim;
     [SerializeField] private Transform destinationUp;
-     [SerializeField] private Transform destinationDown;
+    [SerializeField] private Transform destinationDown;
     //private GameObject currElevator;
     //private bool top;
     //private bool bottom;
