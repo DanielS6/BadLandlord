@@ -12,6 +12,9 @@ public class PauseController : MonoBehaviour {
     public GameObject pauseButton;
     public GameObject pauseMenu;
 
+    // Restart button is not shown on non-level scenes
+    public GameObject restartButton;
+
     // Controlling the volume of the music
     public AudioMixer mixer;
 
@@ -29,6 +32,11 @@ public class PauseController : MonoBehaviour {
         // Pause menu starts hidden
         currentlyPaused = false;
         pauseMenu.SetActive(false);
+
+        // Wtihin the pause menu, the "restart" button is only available
+        // on scenes for a game level
+        restartButton.SetActive(IsLevelScene());
+
         // Make use of the stored volume if it was set in a prior scene
         if ( rawVolumeSliderVal != -1.0f ) {
             mixer.SetFloat(
@@ -49,6 +57,22 @@ public class PauseController : MonoBehaviour {
             } else {
                 PauseGame();
             }
+        }
+    }
+
+    private bool IsLevelScene() {
+        // Check if we are currently in one of the level scenes
+        Scene currentScene = SceneManager.GetActiveScene();
+        string currentSceneName = currentScene.name;
+        switch ( currentSceneName ) {
+            case "Level1":
+            case "Level2":
+            case "level3":
+            case "levelfour":
+            case "level5":
+                return true;
+            default:
+                return false;
         }
     }
 
