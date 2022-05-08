@@ -25,7 +25,7 @@ public class LandlordElevator : MonoBehaviour
                 //transform.position = elevatorComponent.GetDestinationUp().position;
 				newFloor = elevatorComponent.GetDestinationUp();
 				goingUp=true;
-                playerSprite.sortingOrder = 0;
+                //playerSprite.sortingOrder = 0;
                 
             }
         }
@@ -47,11 +47,11 @@ public class LandlordElevator : MonoBehaviour
             GetComponent<Collider2D>().enabled = false;
             GetComponent<Rigidbody2D>().isKinematic = true;
             GetComponent<LandlordMove>().enabled = false;
-            //playerSprite.sortingOrder = 0;
+            playerSprite.sortingOrder = -10;
             
 			Vector2 pos = Vector2.Lerp ((Vector2)transform.position, (Vector2)newFloor.position+ new Vector2(0,0.5f), elevatorSpeed * Time.fixedDeltaTime);
 			transform.position = new Vector3 (pos.x, pos.y, transform.position.z);
-			if (transform.position.y >= newFloor.position.y){ // this condition is not being met
+			if (transform.position.y >= newFloor.position.y){
 				GetComponent<Collider2D>().enabled = true;
                 GetComponent<Rigidbody2D>().isKinematic = false;
                 GetComponent<LandlordMove>().enabled = true;
@@ -64,7 +64,7 @@ public class LandlordElevator : MonoBehaviour
             GetComponent<Collider2D>().enabled = false;
             GetComponent<Rigidbody2D>().isKinematic = true;
             GetComponent<LandlordMove>().enabled = false;
-            playerSprite.sortingOrder = 0;
+            playerSprite.sortingOrder = -10;
             
 			Vector2 pos = Vector2.Lerp ((Vector2)transform.position, (Vector2)newFloor.position- new Vector2(0,0.5f), elevatorSpeed * Time.fixedDeltaTime);
 			transform.position = new Vector3 (pos.x, pos.y, transform.position.z);
@@ -88,6 +88,7 @@ public class LandlordElevator : MonoBehaviour
             currElevator = other.gameObject;
             //elevatorDoors = other.gameObject.GetComponentInChildren<SpriteRenderer>();
             playerSprite = gameObject.GetComponentInChildren<SpriteRenderer>();
+            //playerSprite.sortingOrder = 0;
             
             //anim.SetBool("get_on", true);
         }

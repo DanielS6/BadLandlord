@@ -1840,7 +1840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7532875213315916535, guid: ec7abb068cb0f49a3aaca274ba4c1f35, type: 3}
       propertyPath: elevatorSpeed
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8886509958240639319, guid: ec7abb068cb0f49a3aaca274ba4c1f35, type: 3}
       propertyPath: m_Name
@@ -1850,7 +1850,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1371259686327531693, guid: ec7abb068cb0f49a3aaca274ba4c1f35, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec7abb068cb0f49a3aaca274ba4c1f35, type: 3}
 --- !u!1001 &6267021868429200147
 PrefabInstance:
