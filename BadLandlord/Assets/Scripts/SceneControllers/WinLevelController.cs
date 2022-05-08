@@ -17,7 +17,6 @@ public class WinLevelController : MonoBehaviour {
                 return "level3";
             case "level3":
                 // Level3 -> Level4
-                // TODO figure out level 4 scene name
                 return "levelfour";
             case "levelfour":
                 // Level4 -> Level5
@@ -31,10 +30,8 @@ public class WinLevelController : MonoBehaviour {
     }
 
     // Static entry point to be called by code in the actual game scenes,
-    // launch the WinLevel scene with knowledge of which scene was just
-    // completed, to know where to go next.
-    // For now, known levels and progressions:
-    // Level1 -> Level2 -> WinGame
+    // launch the WinLevel scene with knowledge of which scene is next, based
+    // on the current scene
     private static string nextLevelScene = "";
     public static void LaunchWinLevelScene() {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -43,7 +40,7 @@ public class WinLevelController : MonoBehaviour {
         SceneManager.LoadScene("WinLevel");
     }
 
-    // Advance to the "next" level, based on the already processed name,
+    // Advance to the "next" level, based on the already processed name
     public void PlayNextLevel() {
         if (nextLevelScene == "") {
             Debug.Log("Unknown scene to advance to! Skipping to end.");

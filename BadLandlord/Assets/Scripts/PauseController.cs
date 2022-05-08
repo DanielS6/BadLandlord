@@ -97,8 +97,7 @@ public class PauseController : MonoBehaviour {
     }
 
     public void RestartLevel() {
-        // Named restart level and made scene-agnostic in case we later switch
-        // to having multiple game scenes
+        // Restart the current scene, whatever that is
         // Time should run again for the resumed scene, and no longer paused
         Time.timeScale = 1f;
         currentlyPaused = false;
