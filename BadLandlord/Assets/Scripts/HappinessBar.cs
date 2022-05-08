@@ -25,6 +25,10 @@ public class HappinessBar : MonoBehaviour
     public int happinessLevel = 4;
     private int maxHappinessLevel = 4;
 
+    // To be able to notify the player of which specific tenants are unhappy,
+    // need to know the apartment number
+    public int apartmentNum;
+
     void Start() {
         happinessLevel = 4;
         faceImages[0] = faceImage1;
@@ -53,15 +57,15 @@ public class HappinessBar : MonoBehaviour
             // Level is [1, 4] but array indexes are [0, 3]
             displayFace.sprite = faceImages[ happinessLevel - 1 ];
         }
-        if (happinessLevel <= 1){
-            notificationBar.GetComponent<NotificationBar>().display(
-                "A tenant is unhappy and about to leave!");
-            //lose if tenant is unhappy
-            if (happinessLevel <= 0){
-                levelHandler.GetComponent<LevelHandler>().loseLevel();
-            }
+        // Update notification message, a tenant is happy if they are at 2
+        notificationBar.GetComponent<NotificationBar>().SetTenantHappiness(
+            apartmentNum,
+            happinessLevel >= 2
+        );
+        //lose if tenant is really unhappy
+        if (happinessLevel <= 0){
+            levelHandler.GetComponent<LevelHandler>().loseLevel();
         }
-
     }
 
 }

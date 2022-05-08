@@ -932,16 +932,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappinessBar
       objectReference: {fileID: 0}
+    - target: {fileID: 7781426878030301644, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: apartmentNum
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
---- !u!4 &2133367034167407663 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
-  m_PrefabInstance: {fileID: 983454929896154319}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133367034167407662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1170602819309441249, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+  m_PrefabInstance: {fileID: 983454929896154319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2133367034167407663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
   m_PrefabInstance: {fileID: 983454929896154319}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1146727901490839439

@@ -1371,6 +1371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappinessBar
       objectReference: {fileID: 0}
+    - target: {fileID: 7781426878030301644, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: apartmentNum
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
 --- !u!4 &3156143774988962986 stripped

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Bills : MonoBehaviour
 {
-    
+
     public GameObject countdown;
     public GameObject billsAlert;
     public GameObject levelHandler;
@@ -31,10 +31,9 @@ public class Bills : MonoBehaviour
                 gameTimer = 0;
                 UpdateCountdown();
             }
-            if (countdownNum <= 20){
-                string msg = "The bills need to be paid!";
-                notificationBar.GetComponent<NotificationBar>().display(msg);
-            }
+            notificationBar.GetComponent<NotificationBar>().SetBillsPending(
+                countdownNum <= 20
+            );
             if (countdownNum <= 0){
                 countdownNum = 0;
                 //lose game if bills are not paid
@@ -69,7 +68,7 @@ public class Bills : MonoBehaviour
     {
         if (other.CompareTag("Player") && turnedOn){
            reset();
-            
+
         }
     }
 }

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notificationBar: {fileID: 0}
+  levelHandler: {fileID: 0}
   faceImage1: {fileID: 21300000, guid: 650dfdff0c254c24885dfbee7175633f, type: 3}
   faceImage2: {fileID: 21300000, guid: 5eaba88ab4367034b8197212cfc2f422, type: 3}
   faceImage3: {fileID: 21300000, guid: 86bbab86946672546bbe70d329938fb4, type: 3}
