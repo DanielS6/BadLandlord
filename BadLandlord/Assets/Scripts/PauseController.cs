@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PauseController : MonoBehaviour {
@@ -9,6 +10,9 @@ public class PauseController : MonoBehaviour {
     // components call the methods
     public GameObject pauseButton;
     public GameObject pauseMenu;
+
+    // Controlling the volume of the music
+    public AudioMixer mixer;
 
     // State to know what to do when the escape key is pressed, either pause
     // or resume
@@ -34,9 +38,7 @@ public class PauseController : MonoBehaviour {
     }
 
     public void SetVolumeLevel(float sliderVolume) {
-        // Placeholder for now until we actually have an audio mixer
-        Debug.Log( "Should set volume to:" );
-        Debug.Log( Mathf.Log10(sliderVolume) * 20 );
+        mixer.SetFloat( "MusicVolume", Mathf.Log10(sliderVolume) * 20 );
     }
 
     public void PauseGame() {
