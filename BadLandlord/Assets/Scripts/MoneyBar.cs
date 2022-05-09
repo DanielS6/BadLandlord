@@ -2,19 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //[ExecuteInEditMode()]
 
 public class MoneyBar : MonoBehaviour
 {
     public GameObject moneyText;
-    public int maximum;
+    public int[] maximums = { 100, 150, 200, 250 };
     public int current;
     public Image mask;
+
+    private int maximum;
+    private string[] levelNames = { "Level1", "Level2", "level3", "levelfour" };
+    private string curLevel;
+
 
     void Start()
     {
         current = 0;
+
+        curLevel = SceneManager.GetActiveScene().name;
+        for (int i = 0; i < levelNames.Length; i++)
+        {
+            if (levelNames[i] == curLevel)
+            {
+                maximum = maximums[i];
+                continue;
+            }
+        }
     }
 
     /* PUBLIC FUNCTIONS */
@@ -45,7 +61,7 @@ public class MoneyBar : MonoBehaviour
     }
     void updateMoneyText(){
         Text moneyTextA = moneyText.GetComponent<Text>();
-        moneyTextA.text = "$ " + current;        
+        moneyTextA.text = "$ " + current + " / " + maximum;        
     }
     void GetCurrentFill(){
         float fillAmount = (float) current / (float) maximum;
