@@ -71,7 +71,6 @@ public class PauseController : MonoBehaviour {
             case "Level2":
             case "level3":
             case "levelfour":
-            case "level5":
             case "BackstoryScene":
                 return true;
             default:

@@ -19,9 +19,6 @@ public class WinLevelController : MonoBehaviour {
                 // Level3 -> Level4
                 return "levelfour";
             case "levelfour":
-                // Level4 -> Level5
-                return "level5";
-            case "level5":
                 return "WinGame";
             default:
                 // Unknown
