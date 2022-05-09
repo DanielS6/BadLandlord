@@ -10,6 +10,7 @@ public class Bills : MonoBehaviour
     public GameObject billsAlert;
     public GameObject levelHandler;
     public GameObject notificationBar;
+    public GameObject moneyBar;
     public bool turnedOn;
     public float waitTime = 10f;
 
@@ -67,6 +68,8 @@ public class Bills : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && turnedOn){
+            // lose a little money
+            moneyBar.GetComponent<MoneyBar>().subtractMoney(2);
            reset();
 
         }

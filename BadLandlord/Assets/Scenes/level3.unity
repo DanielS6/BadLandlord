@@ -1778,6 +1778,10 @@ PrefabInstance:
       value: Office
       objectReference: {fileID: 0}
     - target: {fileID: 6696883068348167384, guid: 5eddd4a812e484c089c8a619925454fa, type: 3}
+      propertyPath: moneyBar
+      value: 
+      objectReference: {fileID: 1513996348}
+    - target: {fileID: 6696883068348167384, guid: 5eddd4a812e484c089c8a619925454fa, type: 3}
       propertyPath: levelHandler
       value: 
       objectReference: {fileID: 1906473147}
