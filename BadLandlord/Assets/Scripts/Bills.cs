@@ -8,6 +8,7 @@ public class Bills : MonoBehaviour
 
     public GameObject countdown;
     public GameObject billsAlert;
+    public GameObject billsAlert2;
     public GameObject levelHandler;
     public GameObject notificationBar;
     public GameObject moneyBar;
@@ -54,11 +55,13 @@ public class Bills : MonoBehaviour
         gameTimer = 0f;
         countdownNum = 100;
         billsAlert.SetActive(false);
+        billsAlert2.SetActive(false);
         countdown.SetActive(false);
     }
     void turnOn(){
         countdown.SetActive(true);
         billsAlert.SetActive(true);
+        billsAlert2.SetActive(true);
         turnedOn = true;
     }
     void UpdateCountdown(){
