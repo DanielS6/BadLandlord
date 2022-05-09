@@ -1263,7 +1263,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1409523091172191450, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: m_Name
-      value: Elevator (1)
+      value: Elevator3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: m_RootOrder
@@ -1532,7 +1532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 184779553443304664, guid: 4b0c85c055b2e424bb0b90a97bd7054f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.56
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 184779553443304664, guid: 4b0c85c055b2e424bb0b90a97bd7054f, type: 3}
       propertyPath: m_LocalPosition.z
