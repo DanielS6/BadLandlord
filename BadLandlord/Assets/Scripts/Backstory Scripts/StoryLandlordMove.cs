@@ -7,7 +7,7 @@ public class StoryLandlordMove : MonoBehaviour
     public Animator anim;
     public float speed = 2f;
     public Rigidbody2D rb;
-    public int maxWalkCount = 90;
+    public int maxWalkCount = 100;
     bool isFacingRight = true;
     int counter = 0;
 
