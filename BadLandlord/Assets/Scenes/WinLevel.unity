@@ -237,6 +237,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3c25bc91c33b544ba143c5ded3e635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &613521688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3599659759485775377, guid: 79ea81486d14b451d9b81a81364c1a88, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3599659759485775383, guid: 79ea81486d14b451d9b81a81364c1a88, type: 3}
+      propertyPath: m_Name
+      value: MoneyTransition
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79ea81486d14b451d9b81a81364c1a88, type: 3}
 --- !u!1 &694744043
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3293173049023849754, guid: 6de936130f3051a46962a31f7b30fa82, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3293173049023849754, guid: 6de936130f3051a46962a31f7b30fa82, type: 3}
       propertyPath: m_LocalPosition.x
