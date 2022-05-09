@@ -34,8 +34,9 @@ public class PauseController : MonoBehaviour {
         pauseMenu.SetActive(false);
 
         // Wtihin the pause menu, the "restart" button is only available
-        // on scenes for a game level
-        restartButton.SetActive(IsLevelScene());
+        // on scenes for a game level, or the backstory scene to allow the
+        // player to restart in case they missed the first part
+        restartButton.SetActive(ShouldShowRestartButton());
 
         // Make use of the stored volume if it was set in a prior scene
         if ( rawVolumeSliderVal != -1.0f ) {
@@ -60,8 +61,9 @@ public class PauseController : MonoBehaviour {
         }
     }
 
-    private bool IsLevelScene() {
-        // Check if we are currently in one of the level scenes
+    private bool ShouldShowRestartButton() {
+        // Check if we are currently in one of the level scenes or the
+        // backstory scene
         Scene currentScene = SceneManager.GetActiveScene();
         string currentSceneName = currentScene.name;
         switch ( currentSceneName ) {
@@ -70,6 +72,7 @@ public class PauseController : MonoBehaviour {
             case "level3":
             case "levelfour":
             case "level5":
+            case "BackstoryScene":
                 return true;
             default:
                 return false;
