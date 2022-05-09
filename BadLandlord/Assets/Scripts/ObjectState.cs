@@ -81,6 +81,27 @@ public class ObjectState : MonoBehaviour
         moneybarscript = moneybar.GetComponent<MoneyBar>();
     }
 
+
+
+    // PUBLIC METHODS
+
+    public void ObjectBreakTrial()
+    {
+        if (!broken && !isSafe)
+        {
+            int result = rnd.Next(100);
+            broken = result < BREAKPROBS[curState];
+            if (broken)
+            {
+                curState = BROKEN;
+                ChangeObjectState();
+                StartCoroutine(TimeToFix());
+            }
+        }
+    }
+
+    // PRIVATE METHODS
+
     private void Update()
     {
         if (interactPrompt.enabled && Input.GetKeyDown(KeyCode.E))
@@ -139,18 +160,6 @@ public class ObjectState : MonoBehaviour
         } else
         {
             alert.enabled = false;
-        }
-    }
-
-    public void ObjectBreakTrial()
-    {
-        int result = rnd.Next(100);
-        broken = result < BREAKPROBS[curState];
-        if (broken)
-        {
-            curState = BROKEN;
-            ChangeObjectState();
-            StartCoroutine(TimeToFix());
         }
     }
 
