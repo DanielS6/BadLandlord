@@ -8,8 +8,10 @@ public class Bills : MonoBehaviour
 
     public GameObject countdown;
     public GameObject billsAlert;
+    public GameObject billsAlert2;
     public GameObject levelHandler;
     public GameObject notificationBar;
+    public GameObject moneyBar;
     public bool turnedOn;
     public float waitTime = 10f;
 
@@ -53,11 +55,13 @@ public class Bills : MonoBehaviour
         gameTimer = 0f;
         countdownNum = 100;
         billsAlert.SetActive(false);
+        billsAlert2.SetActive(false);
         countdown.SetActive(false);
     }
     void turnOn(){
         countdown.SetActive(true);
         billsAlert.SetActive(true);
+        billsAlert2.SetActive(true);
         turnedOn = true;
     }
     void UpdateCountdown(){
@@ -67,6 +71,8 @@ public class Bills : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && turnedOn){
+            // lose a little money
+            moneyBar.GetComponent<MoneyBar>().subtractMoney(2);
            reset();
 
         }
