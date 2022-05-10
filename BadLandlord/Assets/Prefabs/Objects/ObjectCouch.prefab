@@ -327,6 +327,7 @@ MonoBehaviour:
   BREAKPROBS: 1e00000028000000
   HAPPINESSEFFECT: 0100000000000000ffffffff
   FIXBEFORE: 10
+  FIXBEFORE2: 10
   curState: 0
   dropOptions:
   - What will you do?

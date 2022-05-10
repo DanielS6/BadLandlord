@@ -19,6 +19,7 @@ public class ObjectState : MonoBehaviour
 
     public int[] HAPPINESSEFFECT = { 1, 0, -1 }; // 1 = +1 happy, -1 = -1 happy
     public int FIXBEFORE = 15; // time to fix object before happiness dec
+    public int FIXBEFORE2 = 30; // time to fix object before happiness dec again
 
     public int curState; // PERFECT, FINE, or BROKEN
     public List<string> dropOptions = // options to send to dropdown menu
@@ -262,6 +263,11 @@ public class ObjectState : MonoBehaviour
     IEnumerator TimeToFix()
     {
         yield return new WaitForSeconds(FIXBEFORE);
+        if (broken)
+        {
+            happinessBar.SendMessage("addHappy", HAPPINESSEFFECT[BROKEN]);
+        }
+        yield return new WaitForSeconds(FIXBEFORE2);
         if (broken)
         {
             happinessBar.SendMessage("addHappy", HAPPINESSEFFECT[BROKEN]);
