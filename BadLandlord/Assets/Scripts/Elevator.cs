@@ -8,6 +8,8 @@ public class Elevator : MonoBehaviour
     public Animator anim;
     [SerializeField] private Transform destinationUp;
     [SerializeField] private Transform destinationDown;
+    private SpriteRenderer controlUp;
+    private SpriteRenderer controlDown;
     //private GameObject currElevator;
     //private bool top;
     //private bool bottom;
@@ -25,6 +27,10 @@ public class Elevator : MonoBehaviour
         //currFloor = 0;
         //currElevator = elevators[currFloor-1];
         anim = gameObject.GetComponentInChildren<Animator>();
+        controlUp = transform.Find("WUp").GetComponent<SpriteRenderer>();
+        controlUp.enabled = false;
+        controlDown = transform.Find("SDown").GetComponent<SpriteRenderer>();
+        controlDown.enabled = false;
     }
     
     public Transform GetDestinationUp()
@@ -42,6 +48,8 @@ public class Elevator : MonoBehaviour
         // Landlord interaction, give options for fixing
         if (other.CompareTag("Player"))
         {
+            controlUp.enabled = true;
+            controlDown.enabled = true;
             anim.SetBool("get_on", true);
         } 
     }
@@ -51,6 +59,8 @@ public class Elevator : MonoBehaviour
         // hide interact prompt
         if (other.CompareTag("Player"))
         {
+            controlUp.enabled = false;
+            controlDown.enabled = false;
             anim.SetBool("get_on", false);
         }
     }
