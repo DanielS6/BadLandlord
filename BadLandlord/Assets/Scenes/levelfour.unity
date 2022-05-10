@@ -251,6 +251,10 @@ PrefabInstance:
       value: HappinessBar4
       objectReference: {fileID: 0}
     - target: {fileID: 7781426878030301644, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: apartmentNum
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781426878030301644, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
       propertyPath: levelHandler
       value: 
       objectReference: {fileID: 1906473147}
