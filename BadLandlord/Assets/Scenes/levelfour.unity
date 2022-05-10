@@ -146,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2227358832727520508, guid: 7459623851656473e89422e360679867, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2227358832727520508, guid: 7459623851656473e89422e360679867, type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,10 +195,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
   m_PrefabInstance: {fileID: 1908644373}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &101594724 stripped
+--- !u!1001 &161858675
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9247122
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170602819309441249, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: m_Name
+      value: HappinessBar4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781426878030301644, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: levelHandler
+      value: 
+      objectReference: {fileID: 1906473147}
+    - target: {fileID: 7781426878030301644, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+      propertyPath: notificationBar
+      value: 
+      objectReference: {fileID: 2019369715}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+--- !u!1 &161858676 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2623706985615542728, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
-  m_PrefabInstance: {fileID: 215515785934489762}
+  m_CorrespondingSourceObject: {fileID: 1170602819309441249, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+  m_PrefabInstance: {fileID: 161858675}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &280277386 stripped
 Transform:
@@ -733,7 +798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -962,7 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4590542882411329038, guid: 80875f7b3fcd74c9db4f706fe6585b1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1350,7 +1415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1414672706949400551, guid: 253bb40bb8e794f58a090636a2af8a21, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1414672706949400551, guid: 253bb40bb8e794f58a090636a2af8a21, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1427,7 +1492,7 @@ PrefabInstance:
     - target: {fileID: 7482771342939558043, guid: 253bb40bb8e794f58a090636a2af8a21, type: 3}
       propertyPath: happinessBar
       value: 
-      objectReference: {fileID: 101594724}
+      objectReference: {fileID: 0}
     - target: {fileID: 8591263103919548192, guid: 253bb40bb8e794f58a090636a2af8a21, type: 3}
       propertyPath: m_Name
       value: ObjectCouch
@@ -1493,6 +1558,10 @@ PrefabInstance:
       propertyPath: destinationDown
       value: 
       objectReference: {fileID: 885932407}
+    - target: {fileID: 1190253032378914255, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 161858676}
     - target: {fileID: 1726965333013602173, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: date
       value: 
@@ -1501,6 +1570,10 @@ PrefabInstance:
       propertyPath: money
       value: 
       objectReference: {fileID: 1513996348}
+    - target: {fileID: 1726965333013602173, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 161858676}
     - target: {fileID: 1726965333013602173, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: levelHandler
       value: 
@@ -1515,7 +1588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2725207338354040912, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2725207338354040912, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1597,6 +1670,10 @@ PrefabInstance:
       propertyPath: destinationDown
       value: 
       objectReference: {fileID: 808338632}
+    - target: {fileID: 4232304393159807132, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 161858676}
     - target: {fileID: 5112984322176604649, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -1649,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elevator4
       objectReference: {fileID: 0}
+    - target: {fileID: 7266423188522394326, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 161858676}
     - target: {fileID: 7479548671565503125, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -1661,6 +1742,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8519279795354170965, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 161858676}
     - target: {fileID: 8666865208669233560, guid: d8d2e0e1c82774d2287b72f6fdbb493b, type: 3}
       propertyPath: m_Sprite
       value: 
