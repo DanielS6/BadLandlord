@@ -53,7 +53,7 @@ public class Bills : MonoBehaviour
     void reset(){
         turnedOn = false;
         gameTimer = 0f;
-        countdownNum = 100;
+        countdownNum = 60;
         billsAlert.SetActive(false);
         billsAlert2.SetActive(false);
         countdown.SetActive(false);
