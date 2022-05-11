@@ -29,16 +29,5 @@ public class TenantMove : MonoBehaviour
             counter++;
         }
         this.transform.rotation = Quaternion.Euler(new Vector4(0f, isFacingRight ? 0f : 180f, 0f));
-        // Also need to flip the Z value so that it doesn't disappear
-        // when facing left. Z should be positive when facing left, negative
-        // when facing right
-        float currentZ = this.transform.position.z;
-        float positiveZ = ( currentZ < 0.0f ? ( -1.0f * currentZ ) : currentZ );
-        Vector3 correctPos = new Vector3(
-            this.transform.position.x,
-            this.transform.position.y,
-            ( isFacingRight ? ( -1.0f * positiveZ ) : positiveZ )
-        );
-        this.transform.position = correctPos;
     }
 }

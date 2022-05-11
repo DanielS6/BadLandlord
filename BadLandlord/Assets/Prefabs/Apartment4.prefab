@@ -1396,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 167278782273760748, guid: e2f30e7166415470483048249738a177, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167278782273760748, guid: e2f30e7166415470483048249738a177, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1434,6 +1434,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1766219318202547729, guid: e2f30e7166415470483048249738a177, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766219318202547729, guid: e2f30e7166415470483048249738a177, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033060796763923007, guid: e2f30e7166415470483048249738a177, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033060796763923007, guid: e2f30e7166415470483048249738a177, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2862435900558380245, guid: e2f30e7166415470483048249738a177, type: 3}
       propertyPath: rb
       value: 
@@ -1466,13 +1482,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 167278782273760748, guid: e2f30e7166415470483048249738a177, type: 3}
   m_PrefabInstance: {fileID: 8920465577034940335}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &2842198615100075142 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 6681750548957483817, guid: e2f30e7166415470483048249738a177, type: 3}
-  m_PrefabInstance: {fileID: 8920465577034940335}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7738325883304352446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1202410839875085585, guid: e2f30e7166415470483048249738a177, type: 3}
+  m_PrefabInstance: {fileID: 8920465577034940335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2842198615100075142 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6681750548957483817, guid: e2f30e7166415470483048249738a177, type: 3}
   m_PrefabInstance: {fileID: 8920465577034940335}
   m_PrefabAsset: {fileID: 0}

@@ -938,14 +938,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
---- !u!4 &2133367034167407663 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
-  m_PrefabInstance: {fileID: 983454929896154319}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133367034167407662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1170602819309441249, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
+  m_PrefabInstance: {fileID: 983454929896154319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2133367034167407663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1170602819309441248, guid: e74d5c4cf479e4bcabb967ca9690bbe4, type: 3}
   m_PrefabInstance: {fileID: 983454929896154319}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1146727901490839439
@@ -1023,7 +1023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3244937477538931256, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3244937477538931256, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1031,7 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3244937477538931256, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -118.30409
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3244937477538931256, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1065,6 +1065,18 @@ PrefabInstance:
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 2133367034167407662}
+    - target: {fileID: 7411648320716847013, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591045952620169664, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.476561
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591045952620169664, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7893792130008882785, guid: c8757d9fc9ce44146b1e4616f0dfaf58, type: 3}
       propertyPath: m_Name
       value: Tenant2
